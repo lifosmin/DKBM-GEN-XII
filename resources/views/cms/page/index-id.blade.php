@@ -1,42 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('cms.base.app')
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>DKBM UMN</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="{{ asset('img/favicon.png') }}" rel="icon">
-  <link href="{{ asset('img/apple-touch-icon.png') }} " rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="{{ asset('vendor/aos/aos.css') }}" rel="stylesheet">
-  <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-  <link href="{{ asset('vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('vendor/remixicon/remixicon.css') }}" rel="stylesheet">
-  <link href="{{ asset('vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/style_timeline.css') }}" rel="stylesheet">
-
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Bootslander - v4.3.0
-  * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+@section('custom-css')
   <style>
     .row1{
     text-align:center;
@@ -53,43 +17,9 @@
       padding: 0 8px 0 8px;
     }
   </style>
-</head>
+@endsection
 
-<body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
-    <div class="container d-flex align-items-center justify-content-between">
-
-      <div class="logo">
-        <h1><a href="{{ route('home') }}"><span>DKBM UMN</span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="{{ route('home') }}"><img src="{{ asset('img/logo.png') }}" alt="" class="img-fluid"></a>-->
-      </div>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#details">Programs</a></li>
-          <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
-          <li><a class="nav-link scrollto" href="#team">Member</a></li>
-          <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="{{ route('home') }}" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" data-bs-auto-close="true" aria-expanded="false"> </span> English</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown09">
-                <a class="dropdown-item active" href="{{ route('home') }}" style="color: black; padding-right:10px;"><span class="flag-icon flag-icon-us"> </span>  English</a>
-                <a class="dropdown-item" href="{{ route('home-id') }}" style="color: black; padding-right:10px;"><span class="flag-icon flag-icon-id"> </span>  Indonesia</a>
-            </div>
-          </li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-
+@section('content')
   <!-- ======= Hero Section ======= -->
   <section id="hero">
 
@@ -100,7 +30,7 @@
             <h1>Dewan Keluarga Besar <span>Mahasiswa</span></h1>
             <h2>Universitas Multimedia Nusantara</h2>
             <div class="text-center text-lg-start">
-              <a href="#about" class="btn-get-started scrollto">About Us</a>
+              <a href="#about" class="btn-get-started scrollto">Profil</a>
             </div>
           </div>
         </div>
@@ -135,32 +65,31 @@
 
         <div class="row">
           <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right" style="background-image: url('{{ asset('img/1 (1).png') }}');">
-            <a href="https://youtu.be/ITz2WEf04os" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true" target="_blank"></a>
+            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
           </div>
 
           <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
-            <h3>About Us</h3>
-            <p>Dewan Keluarga Besar universitas Multimedia Nusantara (DKBM UMN) is the highest student organization in UMN which acts as a legislative and judicial body for UMN students. DKBM UMN was established on January 6, 2011 and has representatives from each faculty.</p>
+            <h3>Profil</h3>
+            <p>Dewan Keluarga Besar universitas Multimedia Nusantara (DKBM UMN) adalah organisasi kemahasiswaan tertinggi di UMN yang bertindak sebagai badan legislatif dan yudikatif mahasiswa UMN. DKBM UMN berdiri pada tanggal 6 Januari 2011 dan memiliki perwakilan dari tiap fakultas.</p>
             
-            <h4>Vission</h4>
-            <p>Our vision is to make DKBM a transparent, credible, competent organization and to bridge the aspirations of students with the rectorate to achieve mutual prosperity.</p>
+            <h4>Visi</h4>
+            <p>Visi kami adalah mewujudkan DKBM menjadi organisasi yang transparan,kredibel,memiliki kompetensi dan menjadi jembatan aspirasi mahasiswa dengan rektorat demi tercapainya kesejahteraan bersama.</p>
             
-            <h4>Mission</h4>
+            <h4>Misi</h4>
 
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="100" style="margin-top: 10px;">
               <div class="icon"><i class="bx bxs-hot"></i></div>
-              <p class="description" style="margin-top: 8px;">Fight for the aspirations of KBM UMN critically and with full transparency so that it can uphold the welfare of UMN KBM</p>
+              <p class="description" style="margin-top: 8px;">Memperjuangkan aspirasi KBM UMN dengan kritis dan penuh transparansi sehingga dapat menjunjung tinggi kesejahteraan KBM UMN</p>
             </div>
 
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="200" style="margin-top: 10px;">
               <div class="icon"><i class="bx bx-right-top-arrow-circle"></i></div>
-              <p class="description" style="margin-top: 8px;">Increase awareness and participation of KBM UMN in the campus democratic process</p>
+              <p class="description" style="margin-top: 8px;">Meningkatkan kesadaran dan keikutsertaan KBM UMN terhadap proses demokrasi kampus</p>
             </div>
 
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="300" style="margin-top: 10px;">
               <div class="icon"><i class="bx bx-atom"></i></div>
-              <p class="description" style="margin-top: 8px;">Strengthening relationships and coordination between organizations and the KBM UMN community
-              </p>
+              <p class="description" style="margin-top: 8px;">Memperkuat hubungan dan koordinasi antar organisasi dan juga komunitas KBM UMN</p>
             </div>
 
           </div>
@@ -180,13 +109,13 @@
           <div class="col-md-8 pt-4" data-aos="fade-up">
             <h3>DKBM Muda</h3>
             <br>
-            <h4>Activities</h4>
+            <h4>Bentuk Kegiatan</h4>
             <p>
-              Recruit, select, and inaugurate D-Mud internally with the signature on the letter of agreement and the giving of D-Mud member card.
+              Merekrut, menyeleksi dan melantik anggota muda DKBM secara internal dengan tanda tangan surat perjanjian dan pengalungan KTA Angmud.
             </p>
-            <h4>Goal</h4>
+            <h4>Tujuan</h4>
             <p>
-              To create high quality member candidates for the next generation of DKBM or any other student organizations. 
+              Menciptakan calon-calon anggota DKBM generasi selanjutnya yang berkualitas tinggi
             </p>
           </div>
         </div>
@@ -198,16 +127,16 @@
           <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
             <h3>Student Aspiration Week</h3>
             <br>
-            <h4>Activities</h4>
+            <h4>Bentuk Kegiatan</h4>
             <ul>
-              <li><i class="bi bi-check"></i> Hold a focus group discussion (FGD) or an open discussion forum with the students</li>
-              <li><i class="bi bi-check"></i> Socialization about DKBM through</li>
-              <li><i class="bi bi-check"></i> Wall Of Aspiration (Offline)</li>
-              <li><i class="bi bi-check"></i> Twibbon competition to invite students to give aspirations through the aspiration form</li>
+              <li><i class="bi bi-check"></i> Mengadakan FGD bertema “Curhat Dengan DKBM” bersama KBM UMN</li>
+              <li><i class="bi bi-check"></i> Sosialisasi mengenai DKBM melalui sosial media milik DKBM</li>
+              <li><i class="bi bi-check"></i> Wall Of Aspiration</li>
+              <li><i class="bi bi-check"></i> Lomba twibbon untuk mengajak mahasiswa memberi aspirasi melalui form aspirasi</li>
             </ul>
-            <h4>Goal</h4>
+            <h4>Tujuan</h4>
             <p>
-              To introduce DKBM to the students of Universitas Multimedia Nusantara and to invite students to discuss problems in their campus life, as well as strengthening between student and rectorate of Universitas Multimedia Nusantara.
+              Memperkenalkan DKBM pada KBM UMN dan mengajak KBM UMN untuk berdiskusi mengenai permasalahan di kampus, serta mempererat hubungan KBM UMN dengan rektorat.
             </p>
           </div>
         </div>
@@ -219,16 +148,16 @@
           <div class="col-md-8 pt-5" data-aos="fade-up">
             <h3>Bincang Hangat</h3>
             <br>
-            <h4>Activities</h4>
+            <h4>Bentuk Kegiatan</h4>
             <p>
-              An open discussion form between students and rectorate
+              Diskusi terbuka dengan pihak rektorat
             </p>
             <br>
-            <h4>Goal</h4>
+            <h4>Tujuan</h4>
             <ul>
-              <li><i class="bi bi-check"></i> Bridging a connection between student to convey their aspirations to the rectorate</li>
-              <li><i class="bi bi-check"></i> To accept direct answers from the rectorate</li>
-              <li><i class="bi bi-check"></i> Strengthening the connection between student and the rectorate</li>
+              <li><i class="bi bi-check"></i> Menjembatani KBM UMN untuk menyampaikan aspirasi kepada pihak rektorat</li>
+              <li><i class="bi bi-check"></i> Mendapat jawaban langsung atas aspirasi mereka dari pihak rektorat</li>
+              <li><i class="bi bi-check"></i> Mempererat hubungan KBM UMN dengan pihak rektorat</li>
             </ul>
           </div>
         </div>
@@ -238,16 +167,16 @@
             <img src="{{ asset('img/stuban.png') }}" class="img-fluid" alt="">
           </div>
           <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
-            <h3>Comparative Study</h3>
+            <h3>Studi Banding</h3>
             <br>
-            <h4>Activities</h4>
+            <h4>Bentuk Kegiatan</h4>
             <p>
-              Hold an online discussion with student organizations of other universities and visit student organizations of other universities.
+              Berdiskusi dengan organisasi kemahasiswaan milik kampus lain secara online. Melakukan kunjungan ke kampus lain (offline).
             </p>
             <br>
-            <h4>Goal</h4>
+            <h4>Tujuan</h4>
             <p>
-              To develop DKBM performance or come up with innovations by looking for references from other universities, also to build a relationship with other universities.
+              Mengembangkan kinerja DKBM atau menciptakan inovasi-inovasi baru dengan cara mencari referensi dari kampus-kampus lain, selain itu dapat juga membangun relasi dengan kampus lain.
             </p>
           </div>
         </div>
@@ -259,16 +188,16 @@
           <div class="col-md-8 pt-4" data-aos="fade-up">
             <h3>DKBM Birthday</h3>
             <br>
-            <h4>Activities</h4>
+            <h4>Bentuk Kegiatan</h4>
             <ul>
-              <li><i class="bi bi-check"></i> Hold a discussion forum with former members of previous generations of DKBM</li>
-              <li><i class="bi bi-check"></i> Hold a social or charity event (example: donation)</li>
-              <li><i class="bi bi-check"></i> Make throwback video</li>
+              <li><i class="bi bi-check"></i> Berdiskusi dengan gen atas sekaligus merayakan ulang tahun DKBM</li>
+              <li><i class="bi bi-check"></i> Membuat acara sosial (contoh : donasi)</li>
+              <li><i class="bi bi-check"></i> Membuat video kenangan</li>
             </ul>
             <br>
-            <h4>Goal</h4>
+            <h4>Tujuan</h4>
             <p>
-              To earn perspectives from former members of previous generations of DKBM regarding solutions and problems on campus and bonding time among several generation of DKBM.
+              Mendapatkan pandangan mengenai solusi permasalahan kehidupan sebagai mahasiswa di berbagai generasi serta Bonding antara anggota DKBM.
             </p>
           </div>
         </div>
@@ -280,14 +209,14 @@
           <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
             <h3>DKBM Journey</h3>
             <br>
-            <h4>Activities</h4>
+            <h4>Bentuk Kegiatan</h4>
             <p>
-              Technical briefing on work flow of divisions in dkbm and educate on what and how to develop DKBM into a better organization.
+              Pembekalan teknis cara kerja per divisi di DKBM dan pendidikan mengenai apa yang harus dilakukan untuk mengembangkan dan memajukan organisasi
             </p>
             <br>
-            <h4>Goal</h4>
+            <h4>Tujuan</h4>
             <p>
-              To make sure that DKBM candidates are ready to carry out their duties in the next generation. 
+              Agar calon DKBM siap untuk mengemban tugas di DKBM.
             </p>
           </div>
         </div>
@@ -300,8 +229,8 @@
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <h2>Gallery</h2>
-          <p>Our Activities</p>
+          <h2>Galeri</h2>
+          <p>Dokumentasi Kegiatan</p>
         </div>
 
         <div class="row no-gutters" data-aos="fade-left">
@@ -357,7 +286,7 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
               <a href="{{ asset('img/gallery/gallery-7.jpg') }}" class="gallery-lightbox">
-                <img src="{{ asset('img/gallery/gallery-7.JPG') }}" alt="" class="img-fluid" style="height: 160px;">
+                <img src="{{ asset('img/gallery/gallery-7.jpg') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
             </div>
           </div>
@@ -365,7 +294,7 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="450">
               <a href="{{ asset('img/gallery/gallery-8.jpg') }}" class="gallery-lightbox">
-                <img src="{{ asset('img/gallery/gallery-8.JPG') }}" alt="" class="img-fluid" style="height: 160px;">
+                <img src="{{ asset('img/gallery/gallery-8.jpg') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
             </div>
           </div>
@@ -380,8 +309,8 @@
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <h2>Member</h2>
-          <p>DKBM Gen XI Member</p>
+          <h2>Anggota</h2>
+          <p>Anggota DKBM Gen XI</p>
         </div>
 
         <div class="row1" data-aos="fade-left" style="align-items: center; margin-bottom: 20px;">
@@ -505,76 +434,76 @@
         <div class="faq-list">
           <ul>
             <li data-aos="fade-up">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq-list-1">What does DKBM do?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq-list-1">DKBM ngapain aja sih?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-1" class="collapse" data-bs-parent=".faq-list">
                 <ul>
-                  <li><i class="bi bi-check"></i> Collect, process, and provide solutions to student aspirations</li>
-                  <li><i class="bi bi-check"></i> Create, review, and revise legal products (GBHO, AD-ART, SOP, etc.)</li>
-                  <li><i class="bi bi-check"></i> Supervise the performance of the executive at UMN</li>
-                  <li><i class="bi bi-check"></i> Hold a meeting with the rectorate to discuss campus issues and student aspirations</li>
+                  <li><i class="bi bi-check"></i> Mengumpulkan, memproses, dan memberi solusi aspirasi mahasiswa</li>
+                  <li><i class="bi bi-check"></i> Membuat, mengkaji, dan merevisi produk hukum (GBHO, AD-ART, SOP, dsb)</li>
+                  <li><i class="bi bi-check"></i> Mengawasi kinerja eksekutif di UMN</li>
+                  <li><i class="bi bi-check"></i> Mengadakan pertemuan dengan rektor untuk membahas isu kampus dan aspirasi mahasiswa</li>
                 </ul>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="100">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">What are the student's aspirations?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Aspirasi mahasiswa tuh apa?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  Hopes and goals for future success can be in the form of opinions, responses, evaluations and thoughts from students
+                  Harapan dan tujuan untuk keberhasilan pada masa yang akan datang dapat berupa opini, tanggapan, evaluasi dan pemikiran dari mahasiswa.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="200">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">What types of aspirations can be processed? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Jenis aspirasi yang di proses? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  Academic, Non-Academic, Facility, and Activities.
+                  Akademik, Non-Akademik, Fasilitas, and Aktivitas.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="300">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">How to deliver aspirations to DKBM? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Bagaimana cara menyampaikan aspirasi ke DKBM ? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  It can be through the aspiration form available in the DKBM Instagram bio or by contacting the DKBM social media.
+                  Bisa melalui form aspirasi yang tersedia di bio instagram DKBM atau dengan menghubungi media sosial DKBM.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="400">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">How long is the term of office of DKBM? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Berapa lama masa jabatan DKBM ? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  During 1 organizational management period or for 1 year.
+                  Selama 1 periode kepengurusan organisasi atau selama 1 tahun.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="500">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-6" class="collapsed">Who can register to DKBM? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-6" class="collapsed">Siapa aja yang boleh daftar ke DKBM ?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-6" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  UMN students who are taking semester 3 or 5, Minimum GPA 2.75, Never been subject to academic/non-academic sanctions, Not serving as a member of the campus media, Join a maximum of 2 organizations, Pass Student Orientation.
+                  Mahasiswa UMN yang sedang menempuh semester 3 atau 5. Minimal IPK 2,75. Tidak pernah dikenakan sanksi akademik / non akademik. Tidak menjabat sebagai anggota media kampus. Mengikuti maksimal 2 organisasi. Lulus OMB.
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="600">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-7" class="collapsed">What divisions does DKBM have?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-7" class="collapsed">DKBM punya divisi apa aja sih?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-7" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  DKBM has 4 divisions, namely: BPH division (Daily Management Body), PB division (BEM Supervision), Kesma division (Student welfare), and Medkom division (Communication and information media).
+                  DKBM punya 4 divisi, yaitu : divisi BPH (Badan Pengurus Harian), divisi PB (Pengawasan BEM), divisi Kesma (Kesejahteraan mahasiswa), dan divisi Medkom (Media komunikasi dan informasi).
                 </p>
               </div>
             </li>
 
             <li data-aos="fade-up" data-aos-delay="700">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-8" class="collapsed">How busy is DKBM?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-8" class="collapsed">Jadi DKBM sibuk ga ya?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-8" class="collapse" data-bs-parent=".faq-list">
                 <p>
-                  Sometimes it's busy, sometimes it's not. When approaching a major work program, of course, we will be busy planning and preparing everything. When there are aspirations/cases that come in, we will definitely hold many meetings with various related parties. During the week we usually only hold regular meetings.
+                  Ada kalanya sibuk, ada kalanya tidak. Saat menjelang program kerja besar tentunya kita akan sibuk merencanakan dan menyiapkan segala hal. Saat ada aspirasi/kasus yang masuk pasti kita akan banyak mengadakan pertemuan dengan berbagai pihak terkait. Saat minggu-minggu biasa kita hanya mengadakan rapat rutin.
                 </p>
               </div>
             </li>
@@ -590,8 +519,8 @@
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <h2>Contact</h2>
-          <p>Contact Us</p>
+          <h2>Kontak</h2>
+          <p>Kontak Kami</p>
         </div>
 
         <div class="row">
@@ -600,7 +529,7 @@
             <div class="info">
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
+                <h4>Lokasi:</h4>
                 <p>New Media Tower, C306 <br>Universitas Multimedia Nusantara</p>
               </div>
 
@@ -624,6 +553,32 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0483694725717!2d106.61609671431056!3d-6.257358863004425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fb56b25975f9%3A0x50c7d605ba8542f5!2sMultimedia%20Nusantara%20University!5e0!3m2!1sen!2sid!4v1631263243622!5m2!1sen!2sid" height="100%" width="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
           
+          <!--<div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+
+          </div>-->
 
         </div>
 
@@ -631,58 +586,4 @@
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col">
-            <div class="footer-info">
-              <h3>DKBM UMN</h3>
-              <p class="pb-3"><em>We Are Your Representative</em></p>
-              <p>
-                New Media Tower, C306 <br>
-                Universitas Multimedia Nusantara<br><br>
-                <strong>Email:</strong> dkbm@umn.ac.id<br>
-              </p>
-              <div class="social-links mt-3">
-                <a href="https://twitter.com/DKBMUMN" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
-                <a href="https://www.facebook.com/dkbmumn" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
-                <a href="https://www.instagram.com/dkbmumn/" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="copyright">
-        DKBM UMN <strong><span>Gen XI</span></strong>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  <div id="preloader"></div>
-
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-  <!-- Vendor JS Files -->
-  <script src="{{ asset('vendor/aos/aos.js') }}"></script>
-  <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ asset('vendor/glightbox/js/glightbox.min.js') }}"></script>
-  <script src="{{ asset('vendor/php-email-form/validate.js') }}"></script>
-  <script src="{{ asset('vendor/purecounter/purecounter.js') }}"></script>
-  <script src="{{ asset('vendor/swiper/swiper-bundle.min.js') }}"></script>
-
-  <!-- Template Main JS File -->
-  <script src="{{ asset('js/main.js') }}"></script>
-
-</body>
-
-</html>
+@endsection
