@@ -10,24 +10,24 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{{ asset('img/favicon.png') }}" rel="icon">
+  <link href="{{ asset('img/apple-touch-icon.png') }} " rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="{{ asset('vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ asset('vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+  <link href="{{ asset('vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link href="assets/css/style_timeline.css" rel="stylesheet">
+  <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/style_timeline.css') }}" rel="stylesheet">
 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
 
@@ -62,9 +62,9 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1><a href="index.html"><span>DKBM UMN</span></a></h1>
+        <h1><a href="{{ route('home') }}"><span>DKBM UMN</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <!-- <a href="{{ route('home') }}"><img src="{{ asset('img/logo.png') }}" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav id="navbar" class="navbar">
@@ -77,10 +77,10 @@
           <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
           <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="index-id.html" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" data-bs-auto-close="true" aria-expanded="false"> </span> Indonesia</a>
+            <a class="nav-link dropdown-toggle" href="{{ route('home-id') }}" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" data-bs-auto-close="true" aria-expanded="false"> </span> Indonesia</a>
             <div class="dropdown-menu" aria-labelledby="dropdown09">
-                <a class="dropdown-item" href="index.html" style="color: black; padding-right:10px;"><span class="flag-icon flag-icon-us"> </span>  English</a>
-                <a class="dropdown-item active" href="index-id.html" style="color: black; padding-right:10px;"><span class="flag-icon flag-icon-id"> </span>  Indonesia</a>
+                <a class="dropdown-item" href="{{ route('home') }}" style="color: black; padding-right:10px;"><span class="flag-icon flag-icon-us"> </span>  English</a>
+                <a class="dropdown-item active" href="{{ route('home-id') }}" style="color: black; padding-right:10px;"><span class="flag-icon flag-icon-id"> </span>  Indonesia</a>
             </div>
           </li>
         </ul>
@@ -105,7 +105,7 @@
           </div>
         </div>
         <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
-          <img src="assets/img/kirim.png" class="img animated" alt="" style="max-width: 450px;">
+          <img src="{{ asset('img/kirim.png') }}" class="img animated" alt="" style="max-width: 450px;">
         </div>
       </div>
     </div>
@@ -134,7 +134,7 @@
       <div class="container-fluid">
 
         <div class="row">
-          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right" style="background-image: url('assets/img/1 (1).png');">
+          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right" style="background-image: url('{{ asset('img/1 (1).png') }}');">
             <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
           </div>
 
@@ -174,7 +174,7 @@
 
         <div class="row content">
           <div class="col-md-4" data-aos="fade-right">
-            <img src="assets/img/dkbmmuda.jpg" class="img-fluid" alt="">
+            <img src="{{ asset('img/dkbmmuda.jpg') }}" class="img-fluid" alt="">
           </div>
           <div class="col-md-8 pt-4" data-aos="fade-up">
             <h3>DKBM Muda</h3>
@@ -192,7 +192,7 @@
 
         <div class="row content">
           <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
-            <img src="assets/img/aspiration.png" class="img-fluid" alt="">
+            <img src="{{ asset('img/aspiration.png') }}" class="img-fluid" alt="">
           </div>
           <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
             <h3>Student Aspiration Week</h3>
@@ -213,7 +213,7 @@
 
         <div class="row content">
           <div class="col-md-4" data-aos="fade-right">
-            <img src="assets/img/binhang.jpg" class="img-fluid" alt="">
+            <img src="{{ asset('img/binhang.jpg') }}" class="img-fluid" alt="">
           </div>
           <div class="col-md-8 pt-5" data-aos="fade-up">
             <h3>Bincang Hangat</h3>
@@ -234,7 +234,7 @@
 
         <div class="row content">
           <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
-            <img src="assets/img/stuban.png" class="img-fluid" alt="">
+            <img src="{{ asset('img/stuban.png') }}" class="img-fluid" alt="">
           </div>
           <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
             <h3>Studi Banding</h3>
@@ -253,7 +253,7 @@
 
         <div class="row content">
           <div class="col-md-4" data-aos="fade-right">
-            <img src="assets/img/birthday.png" class="img-fluid" alt="">
+            <img src="{{ asset('img/birthday.png') }}" class="img-fluid" alt="">
           </div>
           <div class="col-md-8 pt-4" data-aos="fade-up">
             <h3>DKBM Birthday</h3>
@@ -274,7 +274,7 @@
 
         <div class="row content">
           <div class="col-md-4 order-1 order-md-2" data-aos="fade-left">
-            <img src="assets/img/journey.png" class="img-fluid" alt="">
+            <img src="{{ asset('img/journey.png') }}" class="img-fluid" alt="">
           </div>
           <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
             <h3>DKBM Journey</h3>
@@ -307,64 +307,64 @@
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-              <a href="assets/img/gallery/gallery-1.JPG" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-1.JPG" alt="" class="img-fluid" style="height: 160px;">
+              <a href="{{ asset('img/gallery/gallery-1.JPG') }}" class="gallery-lightbox">
+                <img src="{{ asset('img/gallery/gallery-1.JPG') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
-              <a href="assets/img/gallery/gallery-2.JPG" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-2.JPG" alt="" class="img-fluid" style="height: 160px;">
+              <a href="{{ asset('img/gallery/gallery-2.JPG') }}" class="gallery-lightbox">
+                <img src="{{ asset('img/gallery/gallery-2.JPG') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-              <a href="assets/img/gallery/gallery-3.JPG" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-3.JPG" alt="" class="img-fluid" style="height: 160px;">
+              <a href="{{ asset('img/gallery/gallery-3.JPG') }}" class="gallery-lightbox">
+                <img src="{{ asset('img/gallery/gallery-3.JPG') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="250">
-              <a href="assets/img/gallery/gallery-4.png" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-4.png" alt="" class="img-fluid" style="height: 160px;">
+              <a href="{{ asset('img/gallery/gallery-4.png') }}" class="gallery-lightbox">
+                <img src="{{ asset('img/gallery/gallery-4.png') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-              <a href="assets/img/gallery/gallery-5.png" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-5.png" alt="" class="img-fluid" style="height: 160px;">
+              <a href="{{ asset('img/gallery/gallery-5.png') }}" class="gallery-lightbox">
+                <img src="{{ asset('img/gallery/gallery-5.png') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="350">
-              <a href="assets/img/gallery/gallery-6.png" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-6.png" alt="" class="img-fluid" style="height: 160px;">
+              <a href="{{ asset('img/gallery/gallery-6.png') }}" class="gallery-lightbox">
+                <img src="{{ asset('img/gallery/gallery-6.png') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-              <a href="assets/img/gallery/gallery-7.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid" style="height: 160px;">
+              <a href="{{ asset('img/gallery/gallery-7.jpg') }}" class="gallery-lightbox">
+                <img src="{{ asset('img/gallery/gallery-7.jpg') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="450">
-              <a href="assets/img/gallery/gallery-8.jpg" class="gallery-lightbox">
-                <img src="assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid" style="height: 160px;">
+              <a href="{{ asset('img/gallery/gallery-8.jpg') }}" class="gallery-lightbox">
+                <img src="{{ asset('img/gallery/gallery-8.jpg') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
             </div>
           </div>
@@ -387,7 +387,7 @@
 
           <div class="col-lg-2 col-md-6 box">
             <div class="member" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="assets/img/team/Achim.png" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('img/team/Achim.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Ferdinand Joachim</h4>
                 <span>Ketua</span>
@@ -397,7 +397,7 @@
 
           <div class="col-lg-2 col-md-6 mt-5 mt-md-0 box">
             <div class="member" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="assets/img/team/Prajna.png" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('img/team/Prajna.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Prajna Paramitha</h4>
                 <span>Wakil Ketua</span>
@@ -407,7 +407,7 @@
 
           <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 box">
             <div class="member" data-aos="zoom-in" data-aos-delay="300">
-              <div class="pic"><img src="assets/img/team/Shienly.png" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('img/team/Shienly.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Shienly</h4>
                 <span>Sekretaris & Bendahara</span>
@@ -417,7 +417,7 @@
 
           <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 box">
             <div class="member" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="assets/img/team/Varent.png" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('img/team/Varent.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Varent Tamarisca</h4>
                 <span>Kesejahteraan Mahasiswa</span>
@@ -427,7 +427,7 @@
 
           <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 box">
             <div class="member" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="assets/img/team/Arzel.png" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('img/team/Arzel.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Arzel Nathaniel</h4>
                 <span>Kesejahteraan Mahasiswa</span>
@@ -440,7 +440,7 @@
 
           <div class="col-lg-2 col-md-6 box">
             <div class="member" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="assets/img/team/Fiona.png" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('img/team/Fiona.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Fiona Lavinia</h4>
                 <span>Kesejahteraan Mahasiswa</span>
@@ -450,7 +450,7 @@
 
           <div class="col-lg-2 col-md-6 mt-5 mt-md-0 box">
             <div class="member" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="assets/img/team/Cinthya.png" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('img/team/Cinthya.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Cinthya</h4>
                 <span>Medkom</span>
@@ -460,7 +460,7 @@
 
           <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 box">
             <div class="member" data-aos="zoom-in" data-aos-delay="300">
-              <div class="pic"><img src="assets/img/team/Dita.png" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('img/team/Dita.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Cornelia Anindita</h4>
                 <span>Medkom</span>
@@ -470,7 +470,7 @@
 
           <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 box">
             <div class="member" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="assets/img/team/Raymond.png" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('img/team/Raymond.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Raymond C.</h4>
                 <span>Pengawasan BEM</span>
@@ -480,7 +480,7 @@
 
           <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 box">
             <div class="member" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="assets/img/team/Anthony.png" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('img/team/Anthony.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Anthony Rafael</h4>
                 <span>Pengawasan BEM</span>
@@ -698,15 +698,15 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="{{ asset('vendor/aos/aos.js') }}"></script>
+  <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ asset('vendor/php-email-form/validate.js') }}"></script>
+  <script src="{{ asset('vendor/purecounter/purecounter.js') }}"></script>
+  <script src="{{ asset('vendor/swiper/swiper-bundle.min.js') }}"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{{ asset('js/main.js') }}"></script>
 
 </body>
 
