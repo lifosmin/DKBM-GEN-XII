@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Model\RegistrationController;
-use App\Model\LoginController;
+use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\AspirationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +23,5 @@ Route::get('/index-id', [HomeController::class, 'indexid'])->name('home-id');
 Route::get('/login', [RegistrationController::class, 'login'])->name('login');
 Route::post('/login', [RegistrationController::class, 'loginVerification'])->name('loginVerification');
 
+Route::get('/aspiration-form', [AspirationController::class, 'aspirationForm'])->name('aspirationForm');
+Route::post('/aspiration-form', [AspirationController::class, 'aspirationVerification'])->name('aspirationVerification');

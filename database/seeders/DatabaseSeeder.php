@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
         Registration::create([
             'Nama' => 'Admin',
             'Email' => 'admin@umn.ac.id',
-            'NIM' => 00000011111,
+            'NIM' => 11111,
             'Jurusan' => 'Informatika',
             'nomorWA' => '0987654321',
             'ID Line' => 'DKBMUMN'
