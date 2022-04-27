@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Model\RegistrationController;
+use App\Model\LoginController;
 
 /*
 |--------------------------------------------------------------------------
