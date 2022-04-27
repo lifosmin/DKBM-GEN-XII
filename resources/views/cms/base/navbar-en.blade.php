@@ -10,14 +10,25 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#details">Programs</a></li>
-          <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
-          <li><a class="nav-link scrollto" href="#team">Member</a></li>
-          <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="nav-link scrollto" href="{{ route('login') }}">Login</a></li> {{-- SEMENTARA --}}
+            <!-- <li><a class="nav-link scrollto" href="#hero">Home</a></li>
+            <li><a class="nav-link scrollto" href="#about">About</a></li>
+            <li><a class="nav-link scrollto" href="#details">Programs</a></li>
+            <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
+            <li><a class="nav-link scrollto" href="#team">Member</a></li>
+            <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
+            <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
+          <li class="nav-item dropdown">
+            <a class="nav-link scrollto active dropdown-toggle" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" data-bs-auto-close="true" aria-expanded="false"> </span>Home</a>
+            <div class="dropdown-menu menuHome" aria-labelledby="dropdown09">
+              <a class="dropdown-item nav-link scrollto active bi-house-door" href="#hero">Home</a>
+              <a class="dropdown-item nav-link scrollto bi bi-person-check-fill" href="#about">About</a>
+              <a class="dropdown-item nav-link scrollto bi bi-journal-bookmark" href="#details">Programs</a>
+              <a class="dropdown-item nav-link scrollto bi bi-images" href="#gallery">Gallery</a>
+              <a class="dropdown-item nav-link scrollto bi bi-people-fill" href="#team">Member</a>
+              <a class="dropdown-item nav-link scrollto bi bi-question-circle-fill" href="#faq">FAQ</a>
+              <a class="dropdown-item nav-link scrollto bi bi-telephone-fill" href="#contact">Contact</a>
+            </div>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="{{ route('home') }}" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" data-bs-auto-close="true" aria-expanded="false"> </span> English</a>
             <div class="dropdown-menu" aria-labelledby="dropdown09">
