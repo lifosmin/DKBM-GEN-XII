@@ -16,3 +16,7 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/index-id', [HomeController::class, 'indexid'])->name('home-id');
+
+//Login Register
+Route::get('/login', [RegistrationController::class, 'login'])->name('login');
+Route::post('/login', [RegistrationController::class, 'loginVerification'])->name('loginVerification');

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Registration;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +14,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // User::factory(10)->create();
+        Registration::create([
+            'Nama' => 'Admin',
+            'Email' => 'admin@umn.ac.id',
+            'NIM' => 00000011111,
+            'Jurusan' => 'Informatika',
+            'nomorWA' => '0987654321',
+            'ID Line' => 'DKBMUMN'
+        ]);
     }
 }
