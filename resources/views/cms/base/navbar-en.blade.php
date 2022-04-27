@@ -17,6 +17,7 @@
           <li><a class="nav-link scrollto" href="#team">Member</a></li>
           <li><a class="nav-link scrollto" href="#faq">FAQ</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="{{ route('login') }}">Login</a></li> {{-- SEMENTARA --}}
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="{{ route('home') }}" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" data-bs-auto-close="true" aria-expanded="false"> </span> English</a>
             <div class="dropdown-menu" aria-labelledby="dropdown09">
