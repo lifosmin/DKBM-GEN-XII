@@ -2,8 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Model\RegistrationController;
-use App\Model\LoginController;
+use App\Model\Registration;
+use App\Http\Controllers\RegistrationController;
+use App\Model\Login;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,4 +23,5 @@ Route::get('/index-id', [HomeController::class, 'indexid'])->name('home-id');
 //Login Register
 Route::get('/login', [RegistrationController::class, 'login'])->name('login');
 Route::post('/login', [RegistrationController::class, 'loginVerification'])->name('loginVerification');
-
+Route::get('/registration', [RegistrationController::class, 'registration'])->name('registration');
+Route::post('/registration', [RegistrationController::class, 'registrationVerification'])->name('registrationVerification');

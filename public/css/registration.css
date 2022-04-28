@@ -1,0 +1,94 @@
+body {
+    font-family: "Montserrat";
+    background: #122fb2;
+    padding-top: 50px;
+}
+.drought-form h1 {
+    font-family: "Montserrat Bold 2";
+    color: #000000;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+.overlay-background {
+  padding: 5px;
+    background: linear-gradient(
+        134.8deg,
+        rgba(255, 255, 255, 0.7) 0%,
+        rgba(255, 255, 255, 0.3) 100%
+    );
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    backdrop-filter: blur(25px);
+    border-radius: 10px;
+    width: 70%;
+}
+
+form {
+  width: 80%;
+}
+
+.form-control,
+.form-select {
+    border-radius: 5px !important;
+    border: none;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 8px 22px;
+}
+
+.form-select:hover {
+    cursor: pointer !important;
+}
+
+.button-submit {
+    background: #1acc8d;
+    box-shadow: 0px 4px 4px #676666;
+    border-radius: 20px;
+    padding: 8px 20px;
+    outline: none;
+    border: none;
+    /* font-family: "Montserrat Bold"; */
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+    color: white;
+    transition: 0.2s;
+}
+
+.button-submit:focus {
+    outline: none;
+    border: none;
+}
+
+.button-submit:hover {
+    background: #15a170;
+    transition: 0.2s;
+}
+
+.text-color-green a {
+    color: #79dd20;
+    transition: 0.2s;
+}
+.text-color-green a:hover {
+    color: #62b51a;
+    transition: 0.2s;
+}
+.contact-us {
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: none;
+    }
+
+  .overlay-background {
+    width: 90% !important;
+  }
+}
+@media (max-width: 492px) {
+    .text-color-green {
+        padding: 0px 15px;
+    }
+
+  .overlay-background {
+    width: 90% !important;
+  }
+}

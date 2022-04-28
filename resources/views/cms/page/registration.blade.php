@@ -1,59 +1,51 @@
-  @extends('cms.template.app')
+  @extends('cms.base.app')
 
 @section('custom-css')
-  <link rel="stylesheet" href="{{ asset('css/cms/page/droughtRegis.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/registration.css') }}">
 @endsection
 
 @section('content')
 <div class="container py-5 drought-form">
-  <div class="py-3 overlay-background justify-content-center d-flex flex-column text-center">
-    <!-- <div class="w-100 d-flex justify-content-center"></div> -->
-      <img src="{{ asset('images/umn-eco-logo.png')}}" class="py-4 umn-eco-logo text-center m-auto">
-      <h1 class="text-center m-auto">WELCOME!</h1>
+  <div class="m-auto py-3 overlay-background justify-content-center d-flex flex-column text-center">
+      <h1 class="text-center m-auto text-white mt-2">DKBM Form Registration</h1>
       <div class="container mt-1 d-flex justify-content-center m-auto">
-        <form action="{{ route('register-id') }}" method="POST">
+        <form action="{{ route('registration') }}" method="POST">
             @csrf
             <div class="mb-2">
-              <label for="input-email" class="form-label"></label>
-              <input type="email" class="form-control" id="input-email" name="email_student" placeholder="Email">
+              <label for="input-nama" class="form-label"></label>
+              <input type="text" class="form-control @error('Nama') is-invalid @enderror" id="input-nama" name="Nama" placeholder="Nama" value="{{ old("Nama") }}">
             </div>
-            @error('email')
+            @error('Nama')
                 <div class="invalid-feedback">
                     {{ $message }}
                 </div>
             @enderror
+
+            <div class="mb-2">
+              <label for="input-email" class="form-label"></label>
+              <input type="email" class="form-control @error('Email') is-invalid @enderror" id="input-email" name="Email" placeholder="Email" value="{{ old("Email") }}">
+            </div>
+            @error('Email')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
+
             <div class="mb-2">
               <label for="input-password" class="form-label"></label>
-              <input type="password" class="form-control" id="input-password" name="password" placeholder="Password">
+              <input type="password" class="form-control @error('Password') is-invalid @enderror" id="input-password" name="Password" placeholder="Password">
             </div>
-            <div class="mb-2">
-              <label for="input-name" class="form-label"></label>
-              <input type="text" class="form-control" id="input-name" name="nama" placeholder="Nama">
-            </div>
-            @error('nama')
-                <div class="invalid-feedback">
-                    {{ $message }}
-                </div>
-            @enderror
+
             <div class="mb-2">
               <label for="input-nim" class="form-label"></label>
-              <input type="text" class="form-control @error('NIM') is-invalid @enderror" id="input-nim" name="nim" value="{{ old('NIM') }}" placeholder="NIM">
-              @error('nim')
+              <input type="text" class="form-control @error('NIM') is-invalid @enderror" id="input-nim" name="NIM" value="{{ old('NIM') }}" placeholder="NIM">
+              @error('NIM')
                 <div class="invalid-feedback">
                     {{ $message }}
                 </div>
               @enderror 
             </div>
-            <div class="mb-2">
-              <label for="input-angkatan" cass="form-label"></label>
-              <select class="form-select form-select-md" name="angkatan">
-                  <option @if(old('angkatan') != "2017") selected @endif value="2017">2017</option>
-                  <option @if(old('angkatan') === "2018") selected @endif value="2018">2018</option>
-                  <option @if(old('angkatan') === "2019") selected @endif value="2019">2019</option>
-                  <option @if(old('angkatan') === "2020") selected @endif value="2020">2020</option>
-                  <option @if(old('angkatan') === "2021") selected @endif value="2021">2021</option>
-              </select>
-            </div>
+
             <div class="mb-2">
                 <label for="input-jurusan" class="form-label"></label>
                 <select class="form-select form-select-md" name="jurusan">
@@ -72,43 +64,37 @@
                     <option @if(old('jurusan') === "Film & Animasi") selected @endif value="Film & Animasi">Film & Animasi</option>
                 </select>
             </div>
+            
             <div class="mb-2">
-              <label for="input-username_instagram" class="form-label"></label>
-              <input type="text" class="form-control @error('username_instagram') is-invalid @enderror" id="input-username_instagram" name="username_instagram" value="{{ old('username_instagram') }}" placeholder="Instagram">
-              @error('username_instagram')
+              <label for="input-nomorWA" class="form-label"></label>
+              <input type="text" class="form-control @error('nomorWA') is-invalid @enderror" id="input-nomorWA" name="nomorWA" value="{{ old('nomorWA') }}" placeholder="Nomor WA">
+              @error('nomorWA')
                 <div class="invalid-feedback">
                     {{ $message }}
                 </div>
               @enderror
             </div>
+
             <div class="mb-2">
-              <label for="input-id_line" class="form-label"></label>
-              <input type="text" class="form-control @error('id_line') is-invalid @enderror"  id="input-id_line" name="id_line" value="{{ old('id_line') }}" placeholder="ID Line">
-              @error('id_line')
+              <label for="input-ID_Line" class="form-label"></label>
+              <input type="text" class="form-control @error('ID_Line') is-invalid @enderror"  id="input-ID_Line" name="ID_Line" value="{{ old('ID_Line') }}" placeholder="ID Line">
+              @error('ID_Line')
                 <div class="invalid-feedback">
                     {{ $message }}
                 </div>
               @enderror
             </div>
-            <div class="mb-3">
-              <label for="input-telephone" class="form-label"></label>
-              <input type="text" class="form-control @error('telephone') is-invalid @enderror"  id="input-telephone" name="telephone" value="{{ old('telephone') }}" placeholder="Nomor Telepon">
-              @error('telephone')
-                <div class="invalid-feedback">
-                    {{ $message }}
-                </div>
-              @enderror
-            </div>
+
             <div class="d-flex justify-content-center w-100 flex-column text-center">
-              <button type="submit" class="button-submit mx-auto">REGISTER</button>
+              <button type="submit" class="button-submit mx-auto fw-bold">REGISTER</button>
             </div>
         </form>
     </div>
 
     
-    <div class="d-flex justify-content-center w-100 flex-column text-center text-color-green">
-      <p class="pt-3 mb-0 text-white text-center">Already have an account ? <a href="{{ route('loginDrought') }}">Login here!</a></p>
-      <p class="contact-us text-white text-center">If you are having trouble logging in, please <a href="#">contact us</a> through our LINE Official Account</p>
+    <div class="d-flex justify-content-center w-100 flex-column text-center text-white">
+      <p class="pt-3 mb-0 text-center">Already have an account ? <a href="{{ route('login') }}" class="text-decoration-underline text-white fw-bolder">Login here!</a></p>
+      <p class="contact-us text-center">If you are having trouble logging in, please <a href="#" class="text-decoration-underline text-white fw-bolder">contact us</a> through our LINE Official Account</p>
     </div>
   </div>
 </div>

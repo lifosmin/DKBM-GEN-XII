@@ -18,9 +18,10 @@ class DatabaseSeeder extends Seeder
             'Nama' => 'Admin',
             'Email' => 'admin@umn.ac.id',
             'NIM' => 00000011111,
+            'Password' => bcrypt("testing12345"),
             'Jurusan' => 'Informatika',
             'nomorWA' => '0987654321',
-            'ID Line' => 'DKBMUMN'
+            'ID_Line' => 'DKBMUMN'
         ]);
     }
 }
