@@ -8,29 +8,26 @@
         margin: 20px auto;
     }
 </style>
+<link rel="stylesheet" href="{{ asset('css/validation.css') }}">
 @endsection
 
 @section('content')
-<div class="container text-center my-5">
-    <h1>WELCOME!</h1>
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
+<div class="container my-5">
+    <h1 class="text-center">WELCOME!</h1>
+    @if (session('status'))
+        <div style="color:red; font-size:0.8em; margin:auto; text-align:center;">
+            {{ session('status') }}
         </div>
     @endif
-    <form action="{{ route('loginVerification') }}" method="POST" class="form">
+    <form action="{{ route('loginVerification') }}" method="POST" class="form" id="form-login">
       @csrf
-      <div class="mb-3 form-floating">
+      <div class="mb-3">
+        <label for="Email" class="form-label">Email Address</label>
         <input type="email" class="form-control" id="email" name="Email" placeholder="Enter your Email">
-        <label for="floatingInput">Email Address</label>
       </div>
-      <div class="mb-3 form-floating">
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
         <input type="password" class="form-control" id="password" name="password" placeholder="Enter your Password">
-        <label for="floatingInput">Password</label>
       </div>
       <button type="submit" class="btn btn-primary">LOGIN</button>
 
@@ -39,4 +36,11 @@
       </p> --}}
     </form>
   </div>
+@endsection
+
+@section('custom-js')
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+  <script src="{{ asset('js/validation/login-en.js') }}"></script>
 @endsection

@@ -2,6 +2,7 @@
 
 @section('custom-css')
     <link rel="stylesheet" href="{{ asset('css/aspiration.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/validation.css') }}">
 @endsection
 
 @section('content')
@@ -49,6 +50,10 @@
 @section('custom-js')
 <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 <script src="{{ asset('js/aspiration.js') }}"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+<script src="{{ asset('js/validation/aspiration-id.js') }}"></script>
 <script>
 
 </script>

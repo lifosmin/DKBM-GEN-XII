@@ -1,0 +1,8 @@
+.error{
+    color: red;
+    font-size: 0.8rem;
+}
+.form-control.error {
+    background-color: #ffc0a4;
+    border-color: #eb5e28;
+}
