@@ -1,8 +1,12 @@
 @extends('cms.base.app')
 
+@section('custom-css')
+    <link rel="stylesheet" href="{{ asset('css/aspiration.css') }}">
+@endsection
+
 @section('content')
-<div class="container my-5">
-    <form action="{{ route('aspirationVerification') }}" method="POST">
+<div class="container">
+    <form action="{{ route('aspirationVerification') }}" method="POST" class=" form-margin">
         @csrf
         <div class="mb-3">
             <label for="Resi" class="form-label">Resi Anda</label>
@@ -17,7 +21,9 @@
               <option @if(old('Kategori') == 'Fasilitas') selected @endif value="Fasilitas">Fasilitas</option>
               <option @if(old('Kategori') == 'Kegiatan') selected @endif value="Kegiatan">Kegiatan</option>
             </select>
-            <p>Nanti buat penjelasan</p>
+            <div class="mx-2">
+                <small id="description">Aspirasi Akademik adalah Aspirasi yang melingkupi semua kegiatan yang berhubungan dengan kegiatan belajar mengajar.</small>
+            </div>
           </div>
         <div class="mb-3">
             <label for="IsiAspirasi" class="form-label">Aspirasi Anda</label>
@@ -26,4 +32,9 @@
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
+@endsection
+
+@section('custom-js')
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+<script src="{{ asset('js/aspiration.js') }}"></script>
 @endsection
