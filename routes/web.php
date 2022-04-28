@@ -2,9 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Model\Registration;
 use App\Http\Controllers\RegistrationController;
-use App\Model\Login;
+use App\Http\Controllers\AspirationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +20,12 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/index-id', [HomeController::class, 'indexid'])->name('home-id');
 
 //Login Register
-Route::get('/login', [RegistrationController::class, 'login'])->name('login');
-Route::post('/login', [RegistrationController::class, 'loginVerification'])->name('loginVerification');
+Route::get('/login', [RegistrationController::class, 'login'])->name('login')->middleware('guest:users');
+Route::post('/login', [RegistrationController::class, 'loginVerification'])->name('loginVerification')->middleware('guest:users');
+Route::get('/logout', [RegistrationController::class, 'logout'])->name('logout')->middleware('auth:users');
+
 Route::get('/registration', [RegistrationController::class, 'registration'])->name('registration');
 Route::post('/registration', [RegistrationController::class, 'registrationVerification'])->name('registrationVerification');
+
+Route::get('/aspiration-form', [AspirationController::class, 'aspirationForm'])->name('aspirationForm')->middleware('auth:users');
+Route::post('/aspiration-form', [AspirationController::class, 'aspirationVerification'])->name('aspirationVerification')->middleware('auth:users');

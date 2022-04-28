@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Registration;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,11 +18,11 @@ class DatabaseSeeder extends Seeder
         Registration::create([
             'Nama' => 'Admin',
             'Email' => 'admin@umn.ac.id',
-            'NIM' => 00000011111,
-            'Password' => bcrypt("testing12345"),
+            'NIM' => 11111,
             'Jurusan' => 'Informatika',
             'nomorWA' => '0987654321',
-            'ID_Line' => 'DKBMUMN'
+            'ID Line' => 'DKBMUMN',
+            'password' => Hash::make('DKBMUMN2022')
         ]);
     }
 }

@@ -272,6 +272,12 @@ h1, h2, h3, h4, h5, h6 {
   visibility: visible;
 }
 
+.navbar .dropdown .menuHome a{
+  /* color: #1acc8d; */
+  color: black;
+  padding-right:22px;
+}
+
 @media (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
     left: -90%;
