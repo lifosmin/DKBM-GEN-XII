@@ -36,6 +36,19 @@
                 <a class="dropdown-item active" href="{{ route('home-id') }}" style="color: black; padding-right:10px;"><span class="flag-icon flag-icon-id"> </span>  Indonesia</a>
             </div>
           </li>
+          @if(Auth::guard('users')->user())
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" data-bs-auto-close="true" aria-expanded="false"> </span> Selamat Datang, {{ Auth::guard('users')->user()->Nama }}</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown09">
+                <a class="dropdown-item" href="#" style="color: black; padding-right:10px;">  Cek Resi</a>
+                <a class="dropdown-item" href="{{ route('logout') }}" style="color: black; padding-right:10px;">  Keluar</a>
+            </div>
+          </li>
+          @else
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('login') }}">Masuk</a>
+          </li>
+          @endif
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

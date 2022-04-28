@@ -20,8 +20,9 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/index-id', [HomeController::class, 'indexid'])->name('home-id');
 
 //Login Register
-Route::get('/login', [RegistrationController::class, 'login'])->name('login');
-Route::post('/login', [RegistrationController::class, 'loginVerification'])->name('loginVerification');
+Route::get('/login', [RegistrationController::class, 'login'])->name('login')->middleware('guest:users');
+Route::post('/login', [RegistrationController::class, 'loginVerification'])->name('loginVerification')->middleware('guest:users');
+Route::get('/logout', [RegistrationController::class, 'logout'])->name('logout')->middleware('auth:users');
 
 Route::get('/aspiration-form', [AspirationController::class, 'aspirationForm'])->name('aspirationForm');
 Route::post('/aspiration-form', [AspirationController::class, 'aspirationVerification'])->name('aspirationVerification');

@@ -21,6 +21,7 @@ class CreateRegistrationsTable extends Migration
             $table->string('Jurusan');
             $table->string('nomorWA');
             $table->string('ID Line');
+            $table->string('password');
             $table->timestamps();
         });
     }
