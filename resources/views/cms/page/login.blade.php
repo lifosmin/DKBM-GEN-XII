@@ -31,9 +31,9 @@
       </div>
       <button type="submit" class="btn btn-primary">LOGIN</button>
 
-      {{-- <p class="description">
-          Don't have an account? <a href="">Register</a>
-      </p> --}}
+      <p class="description mt-2">
+          Don't have an account? Sign up now! <a href="{{ url("/registration") }}">Register</a>
+      </p>
     </form>
   </div>
 @endsection

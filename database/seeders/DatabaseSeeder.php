@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
             'NIM' => '00000011111',
             'Jurusan' => 'Informatika',
             'nomorWA' => '0987654321',
-            'ID Line' => 'DKBMUMN',
+            'ID_Line' => 'DKBMUMN',
             'password' => Hash::make('DKBMUMN2022')
         ]);
     }
