@@ -40,6 +40,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" data-bs-auto-close="true" aria-expanded="false"> </span> Selamat Datang, {{ Auth::guard('users')->user()->Nama }}</a>
             <div class="dropdown-menu" aria-labelledby="dropdown09">
+              <a class="dropdown-item" href="{{ route('aspirationForm') }}" style="color: black; padding-right:10px;">  Form Aspirasi</a>
                 <a class="dropdown-item" href="#" style="color: black; padding-right:10px;">  Cek Resi</a>
                 <a class="dropdown-item" href="{{ route('logout') }}" style="color: black; padding-right:10px;">  Keluar</a>
             </div>

@@ -11,8 +11,7 @@ class AspirationController extends Controller
     function aspirationForm(){
         $user = Auth::user();
         $randomNumber = rand(0,100);
-        // switch($user->Jurusan){
-        switch("Informatika"){
+        switch($user->Jurusan){
             case "Informatika":
                 $Jurusan = "IF";
                 break;
@@ -53,11 +52,9 @@ class AspirationController extends Controller
                 $Jurusan = "HU";
                 break;
         };
-        $NIM = 45444;
         return view('cms.page.aspirationForm',[
             'title' => 'DKBM UMN - Aspiration Form',
-            // 'Resi' => $Jurusan.$user->NIM.$randomNumber,
-            'Resi' => $Jurusan.$NIM.$randomNumber,
+            'Resi' => $Jurusan.$user->NIM.$randomNumber,
             'language' => 'Indonesia'
         ]);
     }
