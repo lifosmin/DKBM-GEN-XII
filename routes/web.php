@@ -24,7 +24,7 @@ Route::get('/login', [RegistrationController::class, 'login'])->name('login')->m
 Route::post('/login', [RegistrationController::class, 'loginVerification'])->name('loginVerification')->middleware('guest:users');
 Route::get('/logout', [RegistrationController::class, 'logout'])->name('logout')->middleware('auth:users');
 
-Route::get('/registration', [RegistrationController::class, 'registration'])->name('registration');
+Route::get('/registration', [RegistrationController::class, 'registration'])->name('registration')->middleware("guest:users");
 Route::post('/registration', [RegistrationController::class, 'registrationVerification'])->name('registrationVerification');
 
 Route::get('/aspiration-form', [AspirationController::class, 'aspirationForm'])->name('aspirationForm')->middleware('auth:users');

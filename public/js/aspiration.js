@@ -6,10 +6,8 @@ $(document).ready(function(){
         'Kegiatan' : 'Aspirasi kegiatan adalah hal lainnya yang berhubungan dengan kegiatan-kegiatan kemahasiswaan di UMN.'
     };
 
-    console.log("key");  
     $("#CategorySelect").change(function(){
         var key = $(this).val(); 
-        console.log(key);           
         $("#description").text(description[key]);
     });
 });

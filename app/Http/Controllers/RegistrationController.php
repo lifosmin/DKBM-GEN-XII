@@ -54,18 +54,16 @@ class RegistrationController extends Controller
     $validReq = $request->validate([
       'Nama' => 'required|regex:/[a-zA-Z]+$/x',
       'Email' => ['required', 'email:dns', 'regex:/^.+@(student\.umn\.ac\.id|lecturer\.umn\.ac\.id|umn\.ac\.id)$/', 'unique:registrations,Email'],
-      'Password' => 'required',
+      'password' => 'required',
       'NIM' => 'required|regex:/000000(\d{5})/|unique:registrations,NIM',
       'Jurusan' => 'required',
       'nomorWA' => 'required',
-      'ID_Line' => 'required|unique:registrations,ID_Line',
+      'ID_Line' => 'required',
     ]);
-
-    @dd($validReq);
 
     $validReq['password'] = Hash::make($validReq['password']);
     Registration::create($validReq);
 
-    return redirect('/login');
+    return redirect()->route("login");
   }
 }

@@ -1,8 +1,23 @@
 body {
     font-family: "Montserrat";
-    background: #122fb2;
+    /* background: linear-gradient(356deg, rgba(49,105,255,1) 0%, rgba(0,26,145,1) 100%); */
+    /* background-color: white; */
+    /* background: linear-gradient(180deg, rgba(0,70,255,1) 0%, rgba(255,255,255,1) 50%, rgba(224,224,227,1) 100%); */
+    background: linear-gradient(
+        180deg,
+        rgba(0, 48, 176, 1) 0%,
+        rgba(255, 255, 255, 1) 81%,
+        rgba(224, 224, 227, 1) 100%
+    );
     padding-top: 50px;
 }
+
+.form-title {
+    font-family: "Montserrat" !important;
+    font-weight: bold;
+    text-shadow: 3px 5px 2px #5d5d5dd0 !important;
+}
+
 .drought-form h1 {
     font-family: "Montserrat Bold 2";
     color: #000000;
@@ -10,7 +25,7 @@ body {
 }
 
 .overlay-background {
-  padding: 5px;
+    padding: 5px;
     background: linear-gradient(
         134.8deg,
         rgba(255, 255, 255, 0.7) 0%,
@@ -19,11 +34,17 @@ body {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     backdrop-filter: blur(25px);
     border-radius: 10px;
-    width: 70%;
+    width: 65%;
+    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.2);
+}
+
+.text-dark-grey {
+    color: #3e3e3e;
+    font-size: 1.2rem;
 }
 
 form {
-  width: 80%;
+    width: 80%;
 }
 
 .form-control,
@@ -71,24 +92,15 @@ form {
     transition: 0.2s;
 }
 .contact-us {
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .container {
         max-width: none;
     }
 
-  .overlay-background {
-    width: 90% !important;
-  }
-}
-@media (max-width: 492px) {
-    .text-color-green {
-        padding: 0px 15px;
+    .overlay-background {
+        width: 80% !important;
     }
-
-  .overlay-background {
-    width: 90% !important;
-  }
 }
