@@ -17,7 +17,6 @@ class CreateRegistrationsTable extends Migration
             $table->id();
             $table->string('Nama');
             $table->string('Email');
-            $table->string('Password');
             $table->string('NIM');
             $table->string('Jurusan');
             $table->string('nomorWA');
