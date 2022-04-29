@@ -53,8 +53,8 @@ class AspirationController extends Controller
                 $Jurusan = "HU";
                 break;
         };
-        return view('cms.page.aspirationForm',[
-            'title' => 'DKBM UMN - Aspiration Form',
+        return view('cms.page.aspirationForm-id',[
+            'title' => 'DKBM UMN - Form Aspirasi',
             'Resi' => $Jurusan.$nim.$randomNumber,
             'language' => 'Indonesia'
         ]);

@@ -21,8 +21,11 @@ Route::get('/index-id', [HomeController::class, 'indexid'])->name('home-id');
 
 //Login Register
 Route::get('/login', [RegistrationController::class, 'login'])->name('login')->middleware('guest:users');
+Route::get('/login-id', [RegistrationController::class, 'loginid'])->name('login-id')->middleware('guest:users');
 Route::post('/login', [RegistrationController::class, 'loginVerification'])->name('loginVerification');
+Route::post('/login-id', [RegistrationController::class, 'verifikasiLogin'])->name('verifikasiLogin');
 Route::get('/logout', [RegistrationController::class, 'logout'])->name('logout')->middleware('auth:users');
+Route::get('/logout-id', [RegistrationController::class, 'keluar'])->name('keluar')->middleware('auth:users');
 
 Route::get('/registration', [RegistrationController::class, 'registration'])->name('registration')->middleware("guest:users");
 Route::post('/registration', [RegistrationController::class, 'registrationVerification'])->name('registrationVerification');

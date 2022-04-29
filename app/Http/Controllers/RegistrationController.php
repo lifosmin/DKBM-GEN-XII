@@ -16,6 +16,13 @@ class RegistrationController extends Controller
         ]);
     }
 
+    function loginid(){
+      return view('cms.page.login-id',[
+          'title' => 'DKBM UMN - Masuk',
+          'language' => 'Indonesia'
+      ]);
+  }
+
     function loginVerification(request $request){
         $credentials = $request->validate([
             'Email' => 'required | email:dns',
@@ -30,15 +37,39 @@ class RegistrationController extends Controller
         return back()->with('status', 'Invalid login details');
     }
 
-    function logout(){
-        Auth::guard('users')->logout();
+    function verifikasiLogin(request $request){
+      $credentials = $request->validate([
+          'Email' => 'required | email:dns',
+          'password' => 'required'
+      ]);
 
-        request()->session()->invalidate();
+      if(Auth::guard('users')->attempt($credentials)){
+          $request->session()->regenerate();
+          return redirect()->intended(route('home-id'));
+      }
 
-        request()->session()->regenerateToken();
+      return back()->with('status', 'Data yang dimasukkan belum tepat');
+  }
 
-        return redirect(route('home'));
-    }
+  function logout(){
+      Auth::guard('users')->logout();
+
+      request()->session()->invalidate();
+
+      request()->session()->regenerateToken();
+
+      return redirect(route('home'));
+  }
+
+  function keluar(){
+    Auth::guard('users')->logout();
+
+    request()->session()->invalidate();
+
+    request()->session()->regenerateToken();
+
+    return redirect(route('home-id'));
+}
 
   function register() {
   }
