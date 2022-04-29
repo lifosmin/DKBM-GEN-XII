@@ -31,4 +31,6 @@ Route::get('/registration', [RegistrationController::class, 'registration'])->na
 Route::post('/registration', [RegistrationController::class, 'registrationVerification'])->name('registrationVerification');
 
 Route::get('/aspiration-form', [AspirationController::class, 'aspirationForm'])->name('aspirationForm')->middleware('auth:users');
+Route::get('/aspiration-form-id', [AspirationController::class, 'aspirationFormid'])->name('aspirationForm-id')->middleware('auth:users');
 Route::post('/aspiration-form', [AspirationController::class, 'aspirationVerification'])->name('aspirationVerification')->middleware('auth:users');
+Route::post('/aspiration-form-id', [AspirationController::class, 'verifikasiAspirasi'])->name('verifikasiAspirasi')->middleware('auth:users');

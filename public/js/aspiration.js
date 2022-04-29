@@ -1,9 +1,9 @@
 $(document).ready(function(){
     var description = {
-        'Akademik' : 'Aspirasi Akademik adalah Aspirasi yang melingkupi semua kegiatan yang berhubungan dengan kegiatan belajar mengajar.',
-        'Non-Akademik' : 'Aspirasi Non-Akademik adalah Aspirasi yang melingkupi kegiatan non-akademik seperti lomba, KKN, PMK.',
-        'Fasilitas' : 'Aspirasi Fasilitas adalah segala aspirasi yang berhubungan dengan kondisi dan fasilitas dan peralatan yang disediakan/berada dalam lingkungan Universitas Multimedia Nusantara.',
-        'Kegiatan' : 'Aspirasi kegiatan adalah hal lainnya yang berhubungan dengan kegiatan-kegiatan kemahasiswaan di UMN.'
+        'Akademik' : 'Academic Aspirations are aspirations that cover all activities related to teaching and learning activities.',
+        'Non-Akademik' : 'Non-Academic Aspirations are aspirations that cover non-academic activities such as competitions, KKN, PMK.',
+        'Fasilitas' : 'Facility Aspirations are all aspirations related to the conditions and facilities and equipment provided/located within Multimedia Nusantara University.',
+        'Kegiatan' : 'Activity aspirations are other matters related to student activities at UMN.'
     };
 
     $("#CategorySelect").change(function(){
