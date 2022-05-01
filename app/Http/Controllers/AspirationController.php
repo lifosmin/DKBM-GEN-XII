@@ -139,4 +139,12 @@ class AspirationController extends Controller
 
         return redirect(route('home-id'));
     }
+    
+    public function cekResi(){
+        return view('cms.page.cekResi', [
+            'title' => "DKBM UMN - Cek Resi",
+            'language' => "Indonesia",
+            'datas' => Aspiration::All()
+        ]);
+    }
 }

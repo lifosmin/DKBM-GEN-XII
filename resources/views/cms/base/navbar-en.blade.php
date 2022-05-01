@@ -29,6 +29,9 @@
               <a class="dropdown-item nav-link scrollto bi bi-telephone-fill" href="#contact">Contact</a>
             </div>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('cekResi') }}">  Resi Check</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="{{ route('home') }}" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" data-bs-auto-close="true" aria-expanded="false"> </span> English</a>
             <div class="dropdown-menu" aria-labelledby="dropdown09">
@@ -41,7 +44,7 @@
             <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" data-bs-auto-close="true" aria-expanded="false"> </span> Welcome, {{ Auth::guard('users')->user()->Nama }}</a>
             <div class="dropdown-menu" aria-labelledby="dropdown09">
                 <a class="dropdown-item" href="{{ route('aspirationForm') }}" style="color: black; padding-right:10px;">  Aspiration Form</a>
-                <a class="dropdown-item" href="#" style="color: black; padding-right:10px;">  Resi Check</a>
+                <a class="dropdown-item" href="{{ route('cekResi') }}" style="color: black; padding-right:10px;">  Resi Check</a>
                 <a class="dropdown-item" href="{{ route('logout') }}" style="color: black; padding-right:10px;">  Logout</a>
             </div>
           </li>
