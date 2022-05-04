@@ -26,7 +26,7 @@
 
     <div class="container">
       <div class="copyright">
-        DKBM UMN <strong><span>Gen XI</span></strong>
+        DKBM UMN <strong><span>Gen XII</span></strong>
       </div>
     </div>
   </footer><!-- End Footer -->
