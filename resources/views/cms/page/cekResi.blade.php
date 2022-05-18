@@ -9,7 +9,8 @@
 @endsection
 
 @section('content')
-    <div class="container">
+    <div class="d-block w-100 mb-5" style="height: 80px; background-color: rgb(1, 4, 136)"></div>
+    <div class="container" style="min-height:100vh">
         <h1 class="text-center">Cek Resi</h1>
         <table id="example" class="table table-striped table-bordered nowrap" style="width:100%">
             <thead>
