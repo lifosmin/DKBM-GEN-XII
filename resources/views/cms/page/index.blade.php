@@ -562,3 +562,7 @@
 
   </main><!-- End #main -->
 @endsection
+
+@section('custom-js')
+
+@endsection
