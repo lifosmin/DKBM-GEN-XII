@@ -28,7 +28,7 @@ class AspirationController extends Controller
             case "Teknik Fisika":
                 $Jurusan = "TF";
                 break;
-            case "Strategic Communication":
+            case "Komunikasi Strategis":
                 $Jurusan = "SC";
                 break;
             case "Digital Jurnalistics":
@@ -80,7 +80,7 @@ class AspirationController extends Controller
             case "Teknik Fisika":
                 $Jurusan = "TF";
                 break;
-            case "Strategic Communication":
+            case "Komunikasi Strategis":
                 $Jurusan = "SC";
                 break;
             case "Digital Jurnalistics":
