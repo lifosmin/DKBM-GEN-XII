@@ -28,25 +28,25 @@ class AspirationController extends Controller
             case "Teknik Fisika":
                 $Jurusan = "TF";
                 break;
-            case "Strategic Communication":
+            case "Komunikasi Strategis":
                 $Jurusan = "SC";
                 break;
-            case "Digital Jurnalistics":
+            case "Jurnalistik":
                 $Jurusan = "JR";
                 break;
             case "Akuntansi":
                 $Jurusan = "EA";
                 break;
-            case "Management":
+            case "Manajemen":
                 $Jurusan = "EM";
                 break;
-            case "DKV":
+            case "Desain Komunikasi Visual":
                 $Jurusan = "DKV";
                 break;
             case "Film & Animasi":
                 $Jurusan = "FA";
                 break;
-            case "Arsitek":
+            case "Arsitektur":
                 $Jurusan = "AR";
                 break;
             case "Perhotelan":
@@ -80,25 +80,25 @@ class AspirationController extends Controller
             case "Teknik Fisika":
                 $Jurusan = "TF";
                 break;
-            case "Strategic Communication":
+            case "Komunikasi Strategis":
                 $Jurusan = "SC";
                 break;
-            case "Digital Jurnalistics":
+            case "Jurnalistik":
                 $Jurusan = "JR";
                 break;
             case "Akuntansi":
                 $Jurusan = "EA";
                 break;
-            case "Management":
+            case "Manajemen":
                 $Jurusan = "EM";
                 break;
-            case "DKV":
+            case "Desain Komunikasi Visual":
                 $Jurusan = "DKV";
                 break;
             case "Film & Animasi":
                 $Jurusan = "FA";
                 break;
-            case "Arsitek":
+            case "Arsitektur":
                 $Jurusan = "AR";
                 break;
             case "Perhotelan":
