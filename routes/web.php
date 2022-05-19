@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\AspirationController;
 
@@ -41,3 +42,14 @@ Route::post('/aspiration-form-id', [AspirationController::class, 'verifikasiAspi
 
 //Cek Resi
 Route::get('/cek-resi', [AspirationController::class, 'cekResi'])->name('cekResi');
+
+
+//Admin
+Route::group(['prefix' => 'admin'], function () {
+    Route::post('/logout', [AdminController::class, 'logout'])->name('logoutAdmin')->middleware('auth:admin');
+    Route::post('/update', [AdminController::class, 'update'])->name('updateAspiration')->middleware('auth:admin');
+    Route::post('/updateProgress', [AdminController::class, 'updateProgress'])->name('updateProgress')->middleware('auth:admin');
+    Route::get('/dashboard', [AdminController::class, 'index'])->name('admin')->middleware('auth:admin');
+    Route::get('/dashboard-finished', [AdminController::class, 'finished'])->name('adminFinished')->middleware('auth:admin');
+    Route::get('/dashboard-onProgress', [AdminController::class, 'onProgress'])->name('adminOnProgress')->middleware('auth:admin');
+});

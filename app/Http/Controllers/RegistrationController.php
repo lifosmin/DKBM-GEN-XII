@@ -29,9 +29,15 @@ class RegistrationController extends Controller
             'password' => 'required'
         ]);
 
+        if($credentials['Email'] == "admin@umn.ac.id"){
+          if(Auth::guard('admin')->attempt($credentials)){
+            $request->session()->regenerate();
+            return redirect()->intended(route('admin'));
+          }
+        }
         if(Auth::guard('users')->attempt($credentials)){
             $request->session()->regenerate();
-            return redirect()->intended(route('home'));
+            return redirect()->intended(route('home-id'));
         }
 
         return back()->with('status', 'Invalid login details');
@@ -43,6 +49,12 @@ class RegistrationController extends Controller
           'password' => 'required'
       ]);
 
+      if($credentials['Email'] == "admin@umn.ac.id"){
+        if(Auth::guard('admin')->attempt($credentials)){
+          $request->session()->regenerate();
+          return redirect()->intended(route('admin'));
+        }
+      }
       if(Auth::guard('users')->attempt($credentials)){
           $request->session()->regenerate();
           return redirect()->intended(route('home-id'));

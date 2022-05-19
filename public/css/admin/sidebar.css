@@ -1,0 +1,90 @@
+.sidebar-admin {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 100px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #8ABD91; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+.sidebar-admin img {
+    width: 40px;
+}
+
+.text-content {
+    color: white;
+    font-family: "Montserrat";
+    font-size: 10px;
+}
+
+.sidebar-header p{
+    font-family: "Montserrat Bold 2";
+    color: white;
+    font-size: 10px;
+    padding-top: 10px;
+}
+.sidebar-header{
+    padding-top: 20px;
+    transition: 0.2s;
+}
+
+.sidebar-header:hover {
+    cursor: pointer;
+    background-color: #648869; /* Black */
+    transition: 0.2s;
+
+}
+
+.sidebar-footer {
+    padding: 20px 0;
+    transition: 0.2s;
+
+}
+
+.sidebar-footer:hover {
+    cursor: pointer;
+
+    animation: rainbow-bg 2.5s linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rainbow-bg{
+    100%,0%{
+        background-color: rgb(240, 63, 63);
+    }
+    8%{
+        background-color: rgb(245, 154, 63);
+    }
+    16%{
+        background-color: rgb(248, 248, 63);
+    }
+    25%{
+        background-color: rgb(159, 244, 73);
+    }
+    33%{
+        background-color: rgb(93, 244, 93);
+    }
+    41%{
+        background-color: rgb(92, 254, 173);
+    }
+    50%{
+        background-color: rgb(104, 246, 246);
+    }
+    58%{
+        background-color: rgb(84, 169, 254);
+    }
+    66%{
+        background-color: rgb(69, 69, 252);
+    }
+    75%{
+        background-color: rgb(162, 71, 253);
+    }
+    83%{
+        background-color: rgb(252, 68, 252);
+    }
+    91%{
+        background-color: rgb(254, 82, 168);
+    }
+}

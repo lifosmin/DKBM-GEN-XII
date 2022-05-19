@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Aspiration;
 use App\Models\Registration;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -15,14 +17,28 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Registration::create([
-            'Nama' => 'Admin',
+        User::create([
+            'name' => 'Admin',
             'Email' => 'admin@umn.ac.id',
-            'NIM' => '00000011111',
-            'Jurusan' => 'Informatika',
-            'nomorWA' => '0987654321',
-            'ID_Line' => 'DKBMUMN',
             'password' => Hash::make('DKBMUMN2022')
+        ]);
+
+        Registration::create([
+            'Nama' => 'Vallencius Gavriel Alfredo Siswanto',
+            'Email' => 'vallencius.siswanto@student.umn.ac.id',
+            'NIM' => '00000045651',
+            'Jurusan' => 'Informatika',
+            'nomorWA' => '088233632633',
+            'ID_Line' => 'valls1901',
+            'password' => Hash::make('19012003')
+        ]);
+
+        Aspiration::create([
+            'Resi' =>'IF4565101',
+            'Kategori' => 'Akademik',
+            'Isi' => 'Kenapa ga boleh demo di UMN?',
+            'Status' => 'Finished',
+            'Solusi' => "Karena..."
         ]);
     }
 }

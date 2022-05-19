@@ -19,6 +19,7 @@ class CreateAspirationsTable extends Migration
             $table->string('Kategori');
             $table->text('Isi');
             $table->string('Status');
+            $table->string('Solusi')->nullable();
             $table->timestamps();
         });
     }
