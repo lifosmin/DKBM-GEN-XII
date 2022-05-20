@@ -62,6 +62,9 @@
                 <form action="{{ route('updateAspiration') }}" method="POST">
                     @csrf
                     <input type="hidden" name="Resi" value="{{ $item->Resi }}">
+                    <input type="hidden" name="userNama" value="{{ $item->user_send->Nama }}">
+                    <input type="hidden" name="userEmail" value="{{ $item->user_send->Email }}">
+                    <input type="hidden" name="Isi" value="{{ $item->Isi }}">
 
                     <label for="status">Status</label>
                     <select class="form-select" aria-label="Default select example" name="Status" id="Status">
@@ -71,7 +74,7 @@
                     </select>
     
                     <label for="Solusi">Solusi</label>
-                    <textarea placeholder="Masukkan Solusi dari isi Aspirasi..." class="form-control @error('Solusi') is-invalid @enderror" name="Solusi" rows="3"></textarea>
+                    <textarea placeholder="Masukkan Solusi dari isi Aspirasi..." class="form-control @error('Solusi') is-invalid @enderror" name="Solusi" rows="3">{{ $item->Solusi }}</textarea>
                 
                     <button class="btn btn-primary" type="submit">Submit</button>
                 </form>

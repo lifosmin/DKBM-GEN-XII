@@ -56,6 +56,7 @@ class AspirationController extends Controller
         return view('cms.page.aspirationForm',[
             'title' => 'DKBM UMN - Aspiration Form',
             'Resi' => $Jurusan.$nim.$randomNumber,
+            'User_id' => $user->id,
             'language' => 'English'
         ]);
     }
@@ -108,6 +109,7 @@ class AspirationController extends Controller
         return view('cms.page.aspirationForm-id',[
             'title' => 'DKBM UMN - Form Aspirasi',
             'Resi' => $Jurusan.$nim.$randomNumber,
+            'User_id' => $user->id,
             'language' => 'Indonesia'
         ]);
     }
@@ -116,6 +118,7 @@ class AspirationController extends Controller
         // return dd($request);
         $ValidRequest = $request->validate([
             'Resi' => 'required',
+            'User_id' => 'required',
             'Kategori' => 'required',
             'Isi' => 'required'
         ]);
@@ -130,6 +133,7 @@ class AspirationController extends Controller
         // return dd($request);
         $ValidRequest = $request->validate([
             'Resi' => 'required',
+            'User_id' => 'required',
             'Kategori' => 'required',
             'Isi' => 'required'
         ]);

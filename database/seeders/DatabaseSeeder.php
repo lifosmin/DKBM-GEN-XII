@@ -36,9 +36,18 @@ class DatabaseSeeder extends Seeder
         Aspiration::create([
             'Resi' =>'IF4565101',
             'Kategori' => 'Akademik',
+            'User_id' => 1,
             'Isi' => 'Kenapa ga boleh demo di UMN?',
             'Status' => 'Finished',
             'Solusi' => "Karena..."
+        ]);
+
+        Aspiration::create([
+            'Resi' =>'IF4565102',
+            'Kategori' => 'Akademik',
+            'User_id' => 1,
+            'Isi' => 'Kenapa UMN banyak tugas?',
+            'Status' => 'Pending'
         ]);
     }
 }

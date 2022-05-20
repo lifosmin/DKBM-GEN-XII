@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Aspiration;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Mail\SolusiMail;
+use Illuminate\Support\Facades\Mail;
 
 class AdminController extends Controller
 {
@@ -49,6 +51,9 @@ class AdminController extends Controller
         $data->Solusi = $ValidRequest['Solusi'];
         $data->save();
 
+        // Email
+        $this->sendEmail($ValidRequest, $request);
+
         return redirect(route('admin'));
     }
 
@@ -62,6 +67,21 @@ class AdminController extends Controller
         $data->Solusi = $ValidRequest['Solusi'];
         $data->save();
 
+        // Email
+        $this->sendEmail($ValidRequest, $request);
+
         return redirect(route('adminOnProgress'));
+    }
+    
+    //SEND EMAIL
+    public function sendEmail($data, $user)
+    {
+        $details = [
+            'title' => 'DKBM UMN : Aspiration Solution',
+            'name' => $user['userNama'],
+            'aspirasi' => $user["Isi"],
+            'solusi' => $data["Solusi"]
+        ];
+        Mail::to($user['userEmail'])->send(new SolusiMail($details));
     }
 }
