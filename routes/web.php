@@ -41,8 +41,8 @@ Route::post('/aspiration-form', [AspirationController::class, 'aspirationVerific
 Route::post('/aspiration-form-id', [AspirationController::class, 'verifikasiAspirasi'])->name('verifikasiAspirasi')->middleware('auth:users');
 
 //Cek Resi
+Route::get('/resi', [AspirationController::class, 'resi'])->name('resi');
 Route::get('/cek-resi', [AspirationController::class, 'cekResi'])->name('cekResi');
-
 
 //Admin
 Route::group(['prefix' => 'admin'], function () {

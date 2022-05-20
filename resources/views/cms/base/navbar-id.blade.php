@@ -30,7 +30,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('cekResi') }}">  Cek Resi</a>
+            <a class="nav-link" href="{{ route('resi') }}">  Cek Resi</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="{{ route('home-id') }}" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" data-bs-auto-close="true" aria-expanded="false"> </span> Indonesia</a>
@@ -44,7 +44,7 @@
             <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" data-bs-auto-close="true" aria-expanded="false"> </span> Selamat Datang, {{ Auth::guard('users')->user()->Nama }}</a>
             <div class="dropdown-menu" aria-labelledby="dropdown09">
               <a class="dropdown-item" href="{{ route('aspirationForm-id') }}" style="color: black; padding-right:10px;">  Form Aspirasi</a>
-                <a class="dropdown-item" href="{{ route('cekResi') }}" style="color: black; padding-right:10px;">  Cek Resi</a>
+                <a class="dropdown-item" href="{{ route('resi') }}" style="color: black; padding-right:10px;">  Cek Resi</a>
                 <a class="dropdown-item" href="{{ route('keluar') }}" style="color: black; padding-right:10px;">  Keluar</a>
             </div>
           </li>

@@ -33,8 +33,18 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('19012003')
         ]);
 
+        Registration::create([
+            'Nama' => 'Atras Shalhan',
+            'Email' => 'atras.shalhan@student.umn.ac.id',
+            'NIM' => '00000050597',
+            'Jurusan' => 'Komunikasi Strategis',
+            'nomorWA' => '081287318166',
+            'ID_Line' => 'atrasshalhan',
+            'password' => Hash::make('testing12345')
+        ]);
+
         Aspiration::create([
-            'Resi' =>'IF4565101',
+            'Resi' =>'IF45651AB23',
             'Kategori' => 'Akademik',
             'User_id' => 1,
             'Isi' => 'Kenapa ga boleh demo di UMN?',
@@ -43,11 +53,21 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Aspiration::create([
-            'Resi' =>'IF4565102',
-            'Kategori' => 'Akademik',
+            'Resi' =>'SC50597SHFW',
             'User_id' => 1,
-            'Isi' => 'Kenapa UMN banyak tugas?',
-            'Status' => 'Pending'
+            'Kategori' => 'Non-Akademik',
+            'Isi' => 'Testing yuuuhuuuu',
+            'Status' => 'Finished',
+            'Solusi' => "Kepoo yaaaa !!????"
+        ]);
+
+        Aspiration::create([
+            'Resi' =>'SC50597K2H3',
+            'User_id' => 1,
+            'Kategori' => 'Fasilitas',
+            'Isi' => 'Testing lagi gaann',
+            'Status' => 'Pending',
+            'Solusi' => null
         ]);
     }
 }
