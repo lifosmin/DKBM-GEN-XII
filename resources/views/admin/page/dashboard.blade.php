@@ -59,7 +59,7 @@
             <p class="header-text">Isi Aspirasi</p>
             <p>{{ $item->Isi }}</p>
             <div class="container">
-                <form action="{{ route('updateAspiration') }}" method="POST">
+                <form action="{{ route('updateAspiration') }}" method="POST" class="formAspirasi">
                     @csrf
                     <input type="hidden" name="Resi" value="{{ $item->Resi }}">
                     <input type="hidden" name="userNama" value="{{ $item->user_send->Nama }}">
@@ -74,9 +74,9 @@
                     </select>
     
                     <label for="Solusi">Solusi</label>
-                    <textarea placeholder="Masukkan Solusi dari isi Aspirasi..." class="form-control @error('Solusi') is-invalid @enderror" name="Solusi" rows="3">{{ $item->Solusi }}</textarea>
+                    <textarea placeholder="Masukkan Solusi dari isi Aspirasi..." class="form-control @error('Solusi') is-invalid @enderror" name="Solusi" id="solusi" rows="3">{{ $item->Solusi }}</textarea>
                 
-                    <button class="btn btn-primary" type="submit">Submit</button>
+                    <a href="#" class="btn button-submit text-dark w-100" id="modal-submit">Submit</a>
                 </form>
             </div>
         </div>
@@ -86,6 +86,7 @@
 
 @section('custom-js')
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="{{ asset('js/admin/submitNotice.js') }}"></script>
     <script>
         $(document).ready(function() {
             $('#example').DataTable();
