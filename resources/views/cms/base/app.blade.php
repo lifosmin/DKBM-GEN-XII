@@ -70,6 +70,12 @@
   <script src="{{ asset('vendor/purecounter/purecounter.js') }}"></script>
   <script src="{{ asset('vendor/swiper/swiper-bundle.min.js') }}"></script>
 
+  {{-- Jquery --}}
+  <script src="{{ asset('js/base/jquery-3.5.1.min.js') }}"></script>
+  
+  <!-- Sweetalert -->
+  <script src="{{ asset('js/base/sweetalert.js') }}"></script>
+
   <!-- Template Main JS File -->
   <script src="{{ asset('js/main.js') }}"></script>
   

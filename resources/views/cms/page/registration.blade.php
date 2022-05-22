@@ -9,7 +9,7 @@
   <div class="m-auto py-3 overlay-background justify-content-center d-flex flex-column text-center">
       <h1 class="text-center m-auto text-white mt-3 form-title">DKBM Form Registration</h1>
       <div class="container mt-1 d-flex justify-content-center m-auto">
-        <form action="{{ route('registration') }}" method="POST">
+        <form action="{{ route('registration') }}" method="POST" class="formRegistration">
             @csrf
             <div class="mb-0">
               <label for="input-nama" class="form-label"></label>
@@ -90,7 +90,7 @@
             @enderror
 
             <div class="d-flex justify-content-center w-100 flex-column text-center">
-              <button type="submit" class="button-submit mx-auto fw-bold mt-4">REGISTER</button>
+              <a href="#" class="button-submit mx-auto fw-bold mt-4" id="register-submit">REGISTER</a>
             </div>
         </form>
     </div>
@@ -112,4 +112,5 @@ $(document).ready(function(){
   });
 });
 </script>
+<script src="{{ asset('js/cms/registrationNotice.js') }}"></script>
 @endsection
