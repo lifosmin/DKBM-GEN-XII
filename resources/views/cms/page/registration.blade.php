@@ -34,6 +34,9 @@
             <div class="mb-0">
               <label for="input-password" class="form-label"></label>
               <input type="password" class="form-control @error('password') is-invalid @enderror" id="input-password" name="password" placeholder="Password">
+              <div class="text-start justify-content-start mt-2">
+                <input type="checkbox" id="showPassword"> Show Password
+              </div>
             </div>
 
             <div class="mb-0">
@@ -99,4 +102,14 @@
     </div>
   </div>
 </div>
+@endsection
+
+@section('custom-js')
+<script>
+$(document).ready(function(){
+  $('#showPassword').on('change', function(){
+    $('#input-password').attr('type',$('#showPassword').prop('checked')==true?"text":"password"); 
+  });
+});
+</script>
 @endsection

@@ -28,6 +28,9 @@
       <div class="mb-3">
         <label for="password" class="form-label">Kata Sandi</label>
         <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan kata sandi Anda">
+        <div class="text-start justify-content-start mt-2">
+          <input type="checkbox" id="showPassword"> Show Password
+        </div>
       </div>
       <button type="submit" class="btn btn-primary">MASUK</button>
 
@@ -43,4 +46,11 @@
   <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
   <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
   <script src="{{ asset('js/validation/login-id.js') }}"></script>
+  <script>
+    $(document).ready(function(){
+      $('#showPassword').on('change', function(){
+        $('#password').attr('type',$('#showPassword').prop('checked')==true?"text":"password"); 
+      });
+    });
+    </script>
 @endsection
