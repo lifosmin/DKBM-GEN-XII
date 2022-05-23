@@ -63,9 +63,9 @@
     <section id="about" class="about">
       <div class="container-fluid">
 
-        <div class="row">
-          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right" style="background-image: url('{{ asset('img/1 (1).png') }}');">
-            <a href="https://youtu.be/ITz2WEf04os" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true" target="_blank"></a>
+        <div class="row container m-auto">
+          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right" style="background-image: url('{{ asset('img/2021/Foto-bareng.png') }}');">
+            <!-- <a href="https://youtu.be/ITz2WEf04os" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true" target="_blank"></a> -->
           </div>
 
           <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
@@ -222,6 +222,26 @@
           </div>
         </div>
 
+        <div class="row content">
+          <div class="col-md-4" data-aos="fade-right">
+            <img src="{{ asset('img/2021/logo-core.jpg') }}" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-8 pt-4" data-aos="fade-up">
+            <h3>CORE : Connect Communicate Collaborate</h3>
+            <br>
+            <h4>Activities</h4>
+            <ul>
+              <li><i class="bi bi-check"></i> To introduce the function of DKBM and BEM</li>
+              <li><i class="bi bi-check"></i> Organizations sharing session</li>
+              <li><i class="bi bi-check"></i> Organizations bonding time</li>
+            </ul>
+            <br>
+            <h4>Goal</h4>
+            <p>
+            To introduce the difference between DKBM and BEM's function. Also, to build a bond and make a collaboration between organizations
+            </p>
+          </div>
+        </div>
       </div>
     </section><!-- End Details Section -->
 
@@ -237,7 +257,7 @@
         <div class="row no-gutters" data-aos="fade-left">
 
           <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+            <div class="gallery-item d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="100">
               <a href="{{ asset('img/gallery/gallery-1.JPG') }}" class="gallery-lightbox">
                 <img src="{{ asset('img/gallery/gallery-1.JPG') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
@@ -245,7 +265,7 @@
           </div>
 
           <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="150">
+            <div class="gallery-item d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="150">
               <a href="{{ asset('img/gallery/gallery-2.JPG') }}" class="gallery-lightbox">
                 <img src="{{ asset('img/gallery/gallery-2.JPG') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
@@ -253,7 +273,7 @@
           </div>
 
           <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+            <div class="gallery-item d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="200">
               <a href="{{ asset('img/gallery/gallery-3.JPG') }}" class="gallery-lightbox">
                 <img src="{{ asset('img/gallery/gallery-3.JPG') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
@@ -261,7 +281,7 @@
           </div>
 
           <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="250">
+            <div class="gallery-item d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="250">
               <a href="{{ asset('img/gallery/gallery-4.png') }}" class="gallery-lightbox">
                 <img src="{{ asset('img/gallery/gallery-4.png') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
@@ -269,7 +289,7 @@
           </div>
 
           <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+            <div class="gallery-item d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="300">
               <a href="{{ asset('img/gallery/gallery-5.png') }}" class="gallery-lightbox">
                 <img src="{{ asset('img/gallery/gallery-5.png') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
@@ -277,7 +297,7 @@
           </div>
 
           <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="350">
+            <div class="gallery-item d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="350">
               <a href="{{ asset('img/gallery/gallery-6.png') }}" class="gallery-lightbox">
                 <img src="{{ asset('img/gallery/gallery-6.png') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
@@ -285,7 +305,7 @@
           </div>
 
           <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+            <div class="gallery-item d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="400">
               <a href="{{ asset('img/gallery/gallery-7.jpg') }}" class="gallery-lightbox">
                 <img src="{{ asset('img/gallery/gallery-7.JPG') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
@@ -293,13 +313,44 @@
           </div>
 
           <div class="col-lg-3 col-md-4">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="450">
+            <div class="gallery-item d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="450">
               <a href="{{ asset('img/gallery/gallery-8.jpg') }}" class="gallery-lightbox">
                 <img src="{{ asset('img/gallery/gallery-8.JPG') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
             </div>
           </div>
 
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="450">
+              <a href="{{ asset('img/gallery/gallery-8.jpg') }}" class="gallery-lightbox">
+                <img src="{{ asset('img/2021/core-bem.png') }}" alt="" class="img-fluid" style="height: 160px;">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="450">
+              <a href="{{ asset('img/gallery/gallery-8.jpg') }}" class="gallery-lightbox">
+                <img src="{{ asset('img/2021/dkbm-muda.png') }}" alt="" class="img-fluid" style="height: 160px;">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="450">
+              <a href="{{ asset('img/gallery/gallery-8.jpg') }}" class="gallery-lightbox">
+                <img src="{{ asset('img/2021/foto-rapat.jpg') }}" alt="" class="img-fluid" style="height: 160px;">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="450">
+              <a href="{{ asset('img/gallery/gallery-8.jpg') }}" class="gallery-lightbox">
+                <img src="{{ asset('img/2021/rapat-lagi.png') }}" alt="" class="img-fluid" style="height: 160px;">
+              </a>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -316,21 +367,21 @@
 
         <div class="row1" data-aos="fade-left" style="align-items: center; margin-bottom: 20px;">
 
-          <div class="col-lg-2 col-md-6 box">
-            <div class="member" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="{{ asset('img/team/Achim.png') }}" class="img-fluid" alt=""></div>
+          <div class="col-lg-2 col-md-6 mt-5 mt-md-0 box">
+            <div class="member" data-aos="zoom-in" data-aos-delay="200">
+              <div class="pic"><img src="{{ asset('img/2021/anggota/Jazzy.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Ferdinand Joachim</h4>
+                <h4>Jazzy Gratia</h4>
                 <span>Ketua</span>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-2 col-md-6 mt-5 mt-md-0 box">
-            <div class="member" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="{{ asset('img/team/Prajna.png') }}" class="img-fluid" alt=""></div>
+          <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 box">
+            <div class="member" data-aos="zoom-in" data-aos-delay="400">
+              <div class="pic"><img src="{{ asset('img/2021/anggota/Nisa.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Prajna Paramitha</h4>
+                <h4>Nyi Ayu Shafannisa</h4>
                 <span>Wakil Ketua</span>
               </div>
             </div>
@@ -338,62 +389,64 @@
 
           <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 box">
             <div class="member" data-aos="zoom-in" data-aos-delay="300">
-              <div class="pic"><img src="{{ asset('img/team/Shienly.png') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('img/2021/anggota/Anton.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Shienly</h4>
+                <h4>Antonius Kevin</h4>
                 <span>Sekretaris & Bendahara</span>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 box">
-            <div class="member" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="{{ asset('img/team/Varent.png') }}" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Varent Tamarisca</h4>
-                <span>Kesejahteraan Mahasiswa</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 box">
-            <div class="member" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="{{ asset('img/team/Arzel.png') }}" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Arzel Nathaniel</h4>
-                <span>Kesejahteraan Mahasiswa</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row1" data-aos="fade-left" style="align-items: center;">
+          
 
           <div class="col-lg-2 col-md-6 box">
             <div class="member" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="{{ asset('img/team/Fiona.png') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('img/2021/anggota/Diego.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Fiona Lavinia</h4>
+                <h4>Benediktus Diego</h4>
                 <span>Kesejahteraan Mahasiswa</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 box">
+            <div class="member" data-aos="zoom-in" data-aos-delay="400">
+              <div class="pic"><img src="{{ asset('img/2021/anggota/Aurel.png') }}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Anggrita Aurelia</h4>
+                <span>Kesejahteraan Mahasiswa</span>
+              </div>
+            </div>
+          </div>
+
+          
+
+        <div class="row1" data-aos="fade-left" style="align-items: center;">        
+          <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 box">
+              <div class="member" data-aos="zoom-in" data-aos-delay="400">
+                <div class="pic"><img src="{{ asset('img/2021/anggota/Cindy.png') }}" class="img-fluid" alt=""></div>
+                <div class="member-info">
+                  <h4>Cindy Lea Valerie</h4>
+                  <span>Medkom</span>
+                </div>
+              </div>
+            </div>
+         
+          <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 box">
+            <div class="member" data-aos="zoom-in" data-aos-delay="300">
+              <div class="pic"><img src="{{ asset('img/2021/anggota/Linus.png') }}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Linus Gregorius</h4>
+                <span>Medkom</span>
               </div>
             </div>
           </div>
 
           <div class="col-lg-2 col-md-6 mt-5 mt-md-0 box">
             <div class="member" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="{{ asset('img/team/Cinthya.png') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('img/2021/anggota/Alivia.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Cinthya</h4>
-                <span>Medkom</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 box">
-            <div class="member" data-aos="zoom-in" data-aos-delay="300">
-              <div class="pic"><img src="{{ asset('img/team/Dita.png') }}" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Cornelia Anindita</h4>
+                <h4>Alivia Syaidha</h4>
                 <span>Medkom</span>
               </div>
             </div>
@@ -401,23 +454,35 @@
 
           <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 box">
             <div class="member" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="{{ asset('img/team/Raymond.png') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="{{ asset('img/2021/anggota/Ricky.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Raymond C.</h4>
+                <h4>Ricky</h4>
                 <span>Pengawasan BEM</span>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 box">
-            <div class="member" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="{{ asset('img/team/Anthony.png') }}" class="img-fluid" alt=""></div>
+          <div class="col-lg-2 col-md-6 box">
+            <div class="member" data-aos="zoom-in" data-aos-delay="100">
+              <div class="pic"><img src="{{ asset('img/2021/anggota/Acel.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Anthony Rafael</h4>
+                <h4>Eleonora Axcel</h4>
                 <span>Pengawasan BEM</span>
               </div>
             </div>
           </div>
+
+          <div class="col-lg-2 col-md-6 box">
+            <div class="member" data-aos="zoom-in" data-aos-delay="400">
+              <div class="pic"><img src="{{ asset('img/2021/anggota/Sopia.png') }}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Sopia Zalsabillah</h4>
+                <span>Pengawasan BEM</span>
+              </div>
+            </div>
+          </div>
+
+         
         </div>
 
       </div>

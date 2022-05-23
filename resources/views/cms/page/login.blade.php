@@ -3,16 +3,41 @@
 @section('custom-css')
 <style>
     .form{
-        width:50%;
+        width: 80%;
         display: block;
         margin: 20px auto;
+    }
+
+    .section-main{
+      min-height:100vh;
+      
+    }
+
+    body{
+      background-color: #f8fafc;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .btn-masuk{
+      transition: 0.2s;
+      color: white; 
+      background-color:rgba(1, 4, 136, 0.9)
+    }
+
+    .btn-masuk:hover{
+      transition: 0.2s;
+      color: white; 
+      background-color: rgb(2 5 106 / 90%);
     }
 </style>
 <link rel="stylesheet" href="{{ asset('css/validation.css') }}">
 @endsection
 
 @section('content')
-<div class="container my-5">
+
+<div class="section-main" >
+<div class="d-block w-100 mb-5" style="height: 80px; background-color: rgb(1, 4, 136)"></div>
+  <div class="container h-100 m-auto p-3" style="background-color: white; box-shadow: 0px 3.76545px 3.76545px rgba(0, 0, 0, 0.25); border-radius:25px">
     <h1 class="text-center">WELCOME!</h1>
     @if (session('status'))
         <div style="color:red; font-size:0.8em; margin:auto; text-align:center;">
@@ -23,22 +48,24 @@
       @csrf
       <div class="mb-3">
         <label for="Email" class="form-label">Email Address</label>
-        <input type="email" class="form-control" id="email" name="Email" placeholder="Enter your Email">
+        <input type="email" class="form-control" id="email" name="Email" placeholder="Masukkan Email Anda">
       </div>
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your Password">
+        <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan kata sandi Anda">
         <div class="text-start justify-content-start mt-2">
           <input type="checkbox" id="showPassword"> Show Password
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">LOGIN</button>
+      <button type="submit" class="btn btn-masuk" style="">LOGIN</button>
 
       <p class="description mt-2">
-          Don't have an account? Sign up now! <a href="{{ url("/registration") }}">Register</a>
+      Don't have an account? Sign up now! <a style="color:rgba(1, 4, 136, 0.9)" href="{{ url("/registration") }}">Register</a>
       </p>
     </form>
   </div>
+</div>
+
 @endsection
 
 @section('custom-js')
