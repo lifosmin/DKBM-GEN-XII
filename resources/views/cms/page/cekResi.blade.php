@@ -39,7 +39,9 @@
         <div class="modal fade" id="resi-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
                 <div class="modal-content">
-                    <div class="modal-body p-5 py-3 d-flex flex-column justify-content-evenly align-items-center gap-3">
+                    <div class="position-relative modal-body p-5 py-5 d-flex flex-column justify-content-evenly align-items-center gap-3">
+                        <button type="button" data-bs-dismiss="modal" class="btn-close modal-close-button position-absolute" aria-label="Close"></button>
+
                         <div class="resi-item w-100">
                             <div class="resi-description fs-5 fw-bold mb-2">RESI</div>
 
