@@ -73,23 +73,28 @@
             <p>Dewan Keluarga Besar universitas Multimedia Nusantara (DKBM UMN) adalah organisasi kemahasiswaan tertinggi di UMN yang bertindak sebagai badan legislatif dan yudikatif mahasiswa UMN. DKBM UMN berdiri pada tanggal 6 Januari 2011 dan memiliki perwakilan dari tiap fakultas.</p>
             
             <h4>Visi</h4>
-            <p>Visi kami adalah mewujudkan DKBM menjadi organisasi yang transparan,kredibel,memiliki kompetensi dan menjadi jembatan aspirasi mahasiswa dengan rektorat demi tercapainya kesejahteraan bersama.</p>
+            <p>Visi kami adalah untuk menciptakan DKBM yang berintegritas, transparan, aktif, dan responsif dalam mewadahi dan merealisasikan aspirasi mahasiswa/i demi kesejahteraan bersama</p>
             
             <h4>Misi</h4>
 
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="100" style="margin-top: 10px;">
               <div class="icon"><i class="bx bxs-hot"></i></div>
-              <p class="description" style="margin-top: 8px;">Memperjuangkan aspirasi KBM UMN dengan kritis dan penuh transparansi sehingga dapat menjunjung tinggi kesejahteraan KBM UMN</p>
+              <p class="description" style="margin-top: 8px;">Menjadikan DKBM sebagai wadah aspirasi mahasiswa yang aman, responsif, dan dapat diandalkan</p>
             </div>
 
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="200" style="margin-top: 10px;">
               <div class="icon"><i class="bx bx-right-top-arrow-circle"></i></div>
-              <p class="description" style="margin-top: 8px;">Meningkatkan kesadaran dan keikutsertaan KBM UMN terhadap proses demokrasi kampus</p>
+              <p class="description" style="margin-top: 8px;">Menjadi jembatan komunikasi antar mahasiswa/i dengan rektorat</p>
             </div>
 
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="300" style="margin-top: 10px;">
               <div class="icon"><i class="bx bx-atom"></i></div>
-              <p class="description" style="margin-top: 8px;">Memperkuat hubungan dan koordinasi antar organisasi dan juga komunitas KBM UMN</p>
+              <p class="description" style="margin-top: 8px;">Meningkatkan kinerja DKBM dalam fungsi pengawasan</p>
+            </div>
+            
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="300" style="margin-top: 10px;">
+              <div class="icon"><i class="bi bi-chat-dots"></i></div>
+              <p class="description" style="margin-top: 8px;">Meningkatkan komunikasi dan kedekatan antar organisasi kampus</p>
             </div>
 
           </div>
