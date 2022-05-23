@@ -593,23 +593,29 @@
 
           <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
             <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>New Media Tower, C306 <br>Universitas Multimedia Nusantara</p>
-              </div>
+              <a href="https://goo.gl/maps/Hd1PddUoCqLSEVLP6">
+                <div class="address">
+                  <i class="bi bi-geo-alt"></i>
+                  <h4>Location:</h4>
+                  <p>New Media Tower, C306 <br>Universitas Multimedia Nusantara</p>
+                </div>
+              </a>
 
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>dkbm@umn.ac.id</p>
-              </div>
+              <a href="mailto:dkbm@umn.ac.id">
+                <div class="email">
+                  <i class="bi bi-envelope"></i>
+                  <h4>Email:</h4>
+                  <p>dkbm@umn.ac.id</p>
+                </div>
+              </a>
 
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Instagram:</h4>
-                <p>@dkbmumn</p>
-              </div>
+              <a href="https://instagram.com/dkbmumn">
+                <div class="phone" >
+                  <i class="bi bi-phone"></i>
+                  <h4>Instagram:</h4>
+                  <p>@dkbmumn</p>
+                </div>
+              </a>
 
             </div>
 
