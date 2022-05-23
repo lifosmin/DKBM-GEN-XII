@@ -73,24 +73,28 @@
             <p>Dewan Keluarga Besar universitas Multimedia Nusantara (DKBM UMN) is the highest student organization in UMN which acts as a legislative and judicial body for UMN students. DKBM UMN was established on January 6, 2011 and has representatives from each faculty.</p>
             
             <h4>Vission</h4>
-            <p>Our vision is to make DKBM a transparent, credible, competent organization and to bridge the aspirations of students with the rectorate to achieve mutual prosperity.</p>
+            <p>Our vision is to create a DKBM with integrity, transparent, active, and responsive in accommodating and realizing the aspirations of students for the common good.</p>
             
             <h4>Mission</h4>
 
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="100" style="margin-top: 10px;">
               <div class="icon"><i class="bx bxs-hot"></i></div>
-              <p class="description" style="margin-top: 8px;">Fight for the aspirations of KBM UMN critically and with full transparency so that it can uphold the welfare of UMN KBM</p>
+              <p class="description" style="margin-top: 8px;">Making DKBM a safe, responsive, and reliable place for student aspirations</p>
             </div>
 
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="200" style="margin-top: 10px;">
               <div class="icon"><i class="bx bx-right-top-arrow-circle"></i></div>
-              <p class="description" style="margin-top: 8px;">Increase awareness and participation of KBM UMN in the campus democratic process</p>
+              <p class="description" style="margin-top: 8px;">Become a communication bridge between students and the rectorate</p>
             </div>
 
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="300" style="margin-top: 10px;">
               <div class="icon"><i class="bx bx-atom"></i></div>
-              <p class="description" style="margin-top: 8px;">Strengthening relationships and coordination between organizations and the KBM UMN community
-              </p>
+              <p class="description" style="margin-top: 8px;">Improving DKBM performance in the supervisory function</p>
+            </div>
+
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="300" style="margin-top: 10px;">
+              <div class="icon"><i class="bi bi-chat-dots"></i></div>
+              <p class="description" style="margin-top: 8px;">Escalate communication and closeness between campus organizations</p>
             </div>
 
           </div>
