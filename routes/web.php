@@ -52,4 +52,7 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('admin')->middleware('auth:admin');
     Route::get('/dashboard-finished', [AdminController::class, 'finished'])->name('adminFinished')->middleware('auth:admin');
     Route::get('/dashboard-onProgress', [AdminController::class, 'onProgress'])->name('adminOnProgress')->middleware('auth:admin');
+    Route::get('/dashboard-user', [AdminController::class, 'dataUser'])->name('dataUser')->middleware('auth:admin');
+    Route::post('/dashboard-edit-user', [AdminController::class, 'editUser'])->name('editUser')->middleware('auth:admin');
+    Route::get('/dashboard-delete-user/{registration:id}', [AdminController::class, 'deleteUser'])->name('deleteUser')->middleware('auth:admin');
 });
