@@ -14,6 +14,9 @@
         <div class="sidebar-items py-1" data-bs-toggle="tooltip" data-bs-placement="right" title="Aspirasi Finished">
             <a href="{{ route('adminFinished') }}"><img src="{{ asset('img/1 (1).png') }}" alt=""></a>
         </div>
+        <div class="sidebar-items py-1" data-bs-toggle="tooltip" data-bs-placement="right" title="Data User">
+            <a href="{{ route('dataUser') }}"><img src="{{ asset('img/1 (1).png') }}" alt=""></a>
+        </div>
     </div>
 
     <form action="{{ route('logoutAdmin') }}" method="POST">

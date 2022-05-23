@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Aspiration;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use App\Mail\SolusiMail;
+use App\Models\Registration;
 use Illuminate\Support\Facades\Mail;
 
 class AdminController extends Controller
@@ -29,6 +31,43 @@ class AdminController extends Controller
             'title' => 'DKBM UMN - Dashboard Admin',
             'items' => Aspiration::All()->where('Status',"On Progress")
         ]);
+    }
+
+    public function dataUser(){
+        return view('admin.page.dataUser',[
+            'title' => 'DKBM UMN - Dashboard Admin',
+            'items' => Registration::All()
+        ]);
+    }
+
+    public function editUser(Request $request){
+        $ValidRequest = $request->validate([
+            'Nama' => 'required',
+            'Email' => 'required',
+            'NIM' => 'required',
+            'Jurusan' => 'required',
+            'nomorWA' => 'required',
+            'ID_Line' => 'required',
+        ]);
+
+        $data = Registration::where('id', $request['id'])->first();
+        $data->Nama = $ValidRequest['Nama'];
+        $data->Email = $ValidRequest['Email'];
+        $data->NIM = $ValidRequest['NIM'];
+        $data->Jurusan = $ValidRequest['Jurusan'];
+        $data->nomorWA = $ValidRequest['nomorWA'];
+        $data->ID_Line = $ValidRequest['ID_Line'];
+        if($request['password']){
+            $data->password = Hash::make($request['password']);
+        }
+        $data->save();
+
+        return redirect(route('dataUser'));
+    }
+
+    public function deleteUser(Registration $registration){
+        $delete = Registration::where('id', $registration->id)->delete();
+        return redirect(route('dataUser'));
     }
 
     function logout(){
