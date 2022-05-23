@@ -98,7 +98,7 @@
     
     <div class="d-flex justify-content-center w-100 flex-column text-center text-dark-grey">
       <p class="mt-1 pt-3 mb-0 text-center">Already have an account ? <a href="{{ route('login') }}" class="text-decoration-underline text-white fw-bolder">Login here!</a></p>
-      <p class="contact-us text-center px-5">If you are having trouble logging in, please <a href="#" class="text-decoration-underline text-white fw-bolder">contact us</a> through our LINE Official Account</p>
+      <p class="contact-us text-center px-5">If you are having trouble logging in, please <a href="http://line.me/ti/p/~@471dpxdr" class="text-decoration-underline text-white fw-bolder">contact us</a> through our LINE Official Account</p>
     </div>
   </div>
 </div>
