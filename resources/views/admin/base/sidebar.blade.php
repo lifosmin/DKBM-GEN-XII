@@ -6,16 +6,16 @@
 
     <div class="sidebar-body flex-column d-flex justify-content-center align-items-center">
         <div class="sidebar-items py-1" data-bs-toggle="tooltip" data-bs-placement="right" title="Aspirasi Pending">
-            <a href="{{ route('admin') }}"><img  src="{{ asset('img/1 (1).png') }}" alt=""></a>
+            <a href="{{ route('admin') }}"><lottie-player src="https://assets5.lottiefiles.com/private_files/lf30_qhmjozme.json"  background="transparent"  speed="1"  style="width: 50px; height: 50px;"  loop autoplay></lottie-player></a>
         </div>
         <div class="sidebar-items py-1" data-bs-toggle="tooltip" data-bs-placement="right" title="Aspirasi On Progress">
-            <a href="{{ route('adminOnProgress') }}"><img src="{{ asset('img/1 (1).png') }}" alt=""></a>
+            <a href="{{ route('adminOnProgress') }}"><lottie-player src="https://assets2.lottiefiles.com/packages/lf20_cjy4zhdi.json"  background="transparent"  speed="1"  style="width: 50px; height: 50px;"  loop autoplay></lottie-player></a>
         </div>
         <div class="sidebar-items py-1" data-bs-toggle="tooltip" data-bs-placement="right" title="Aspirasi Finished">
-            <a href="{{ route('adminFinished') }}"><img src="{{ asset('img/1 (1).png') }}" alt=""></a>
+            <a href="{{ route('adminFinished') }}"><lottie-player src="https://assets10.lottiefiles.com/packages/lf20_e4lyxm13.json"  background="transparent"  speed="1"  style="width: 50px; height: 50px;"  loop autoplay></lottie-player></a>
         </div>
         <div class="sidebar-items py-1" data-bs-toggle="tooltip" data-bs-placement="right" title="Data User">
-            <a href="{{ route('dataUser') }}"><img src="{{ asset('img/1 (1).png') }}" alt=""></a>
+            <a href="{{ route('dataUser') }}"><lottie-player src="https://assets10.lottiefiles.com/packages/lf20_yravkfyg.json"  background="transparent"  speed="1"  style="width: 50px; height: 50px;"  loop autoplay></lottie-player></a>
         </div>
     </div>
 

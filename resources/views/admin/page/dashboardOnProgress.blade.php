@@ -53,6 +53,12 @@
                 <h2>
                     Aspirasi {{ $item->Resi }}
                 </h2>
+                <p>{{ $item->user_send->Nama }} - {{ $item->user_send->NIM }}</p>
+                <p>Email    : {{ $item->user_send->Email }}</p>
+                <p>Jurusan  : {{ $item->user_send->Jurusan }}</p>
+                <p>Nomor WA : {{ $item->user_send->nomorWA }}</p>
+                <p>ID Line  : {{ $item->user_send->ID_Line }}</p>
+                <hr/>
                 <p>Kategori: {{ $item->Kategori }}</p>
                 <p>Status  : {{ $item->Status }}</p>
             </div>
