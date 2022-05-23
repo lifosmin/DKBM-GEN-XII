@@ -53,8 +53,14 @@
                 <h2>
                     Aspirasi {{ $item->Resi }}
                 </h2>
-                <p>Kategori: {{ $item->Kategori }}</p>
-                <p>Status  : {{ $item->Status }}</p>
+                <p>{{ $item->user_send->Nama }} - {{ $item->user_send->NIM }}</p>
+                <p>Email    : {{ $item->user_send->Email }}</p>
+                <p>Jurusan  : {{ $item->user_send->Jurusan }}</p>
+                <p>Nomor WA : {{ $item->user_send->nomorWA }}</p>
+                <p>ID Line  : {{ $item->user_send->ID_Line }}</p>
+                <hr/>
+                <p>Kategori : {{ $item->Kategori }}</p>
+                <p>Status   : {{ $item->Status }}</p>
             </div>
             <p class="header-text">Isi Aspirasi</p>
             <p>{{ $item->Isi }}</p>
@@ -75,7 +81,12 @@
     
                     <label for="Solusi">Solusi</label>
                     <textarea placeholder="Masukkan Solusi dari isi Aspirasi..." class="form-control @error('Solusi') is-invalid @enderror" name="Solusi" id="solusi" rows="3">{{ $item->Solusi }}</textarea>
-                
+                    @error('Solusi')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                    @enderror
+
                     <a href="#" class="btn button-submit text-dark w-100" id="modal-submit">Submit</a>
                 </form>
             </div>
