@@ -11,7 +11,9 @@
               <p>
                 New Media Tower, C306 <br>
                 Universitas Multimedia Nusantara<br><br>
-                <strong>Email:</strong> dkbm@umn.ac.id<br>
+                <a class="text-decoration-none text-white" href="mailto:dkbm@umn.ac.id">
+                  <strong>Email:</strong> dkbm@umn.ac.id<br>
+                </a>
               </p>
               <div class="social-links mt-3">
                 <a href="https://twitter.com/DKBMUMN" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
@@ -26,7 +28,7 @@
 
     <div class="container">
       <div class="copyright">
-        DKBM UMN <strong><span>Gen XII</span></strong>
+        &copy DKBM UMN <strong><span>Gen XII</span></strong>
       </div>
     </div>
   </footer><!-- End Footer -->

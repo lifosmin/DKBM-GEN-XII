@@ -3,7 +3,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1><a href="{{ route('home') }}"><span>DKBM UMN</span></a></h1>
+        <h1><a href="{{ route('home-id') }}"><span>DKBM UMN</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="{{ route('home') }}"><img src="{{ asset('img/logo.png') }}" alt="" class="img-fluid"></a>-->
       </div>
@@ -20,13 +20,13 @@
           <li class="nav-item dropdown">
             <a class="nav-link scrollto active dropdown-toggle" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" data-bs-auto-close="true" aria-expanded="false"> </span>Beranda</a>
             <div class="dropdown-menu menuHome" aria-labelledby="dropdown09">
-              <a class="dropdown-item nav-link scrollto active bi-house-door" href="#hero">Beranda</a>
-              <a class="dropdown-item nav-link scrollto bi bi-person-check-fill" href="#about">Profil</a>
-              <a class="dropdown-item nav-link scrollto bi bi-journal-bookmark" href="#details">Kegiatan</a>
-              <a class="dropdown-item nav-link scrollto bi bi-images" href="#gallery">Galeri</a>
-              <a class="dropdown-item nav-link scrollto bi bi-people-fill" href="#team">Anggota</a>
-              <a class="dropdown-item nav-link scrollto bi bi-question-circle-fill" href="#faq">FAQ</a>
-              <a class="dropdown-item nav-link scrollto bi bi-telephone-fill" href="#contact">Kontakk</a>
+              <a class="dropdown-item nav-link scrollto active bi-house-door" href="{{ route('home-id') }}#hero">Beranda</a>
+              <a class="dropdown-item nav-link scrollto bi bi-person-check-fill" href="{{ route('home-id') }}#about">Profil</a>
+              <a class="dropdown-item nav-link scrollto bi bi-journal-bookmark" href="{{ route('home-id') }}#details">Kegiatan</a>
+              <a class="dropdown-item nav-link scrollto bi bi-images" href="{{ route('home-id') }}#gallery">Galeri</a>
+              <a class="dropdown-item nav-link scrollto bi bi-people-fill" href="{{ route('home-id') }}#team">Anggota</a>
+              <a class="dropdown-item nav-link scrollto bi bi-question-circle-fill" href="{{ route('home-id') }}#faq">FAQ</a>
+              <a class="dropdown-item nav-link scrollto bi bi-telephone-fill" href="{{ route('home-id') }}#contact">Kontakk</a>
             </div>
           </li>
           <li class="nav-item">

@@ -20,13 +20,13 @@
           <li class="nav-item dropdown">
             <a class="nav-link scrollto active dropdown-toggle" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" data-bs-auto-close="true" aria-expanded="false"> </span>Home</a>
             <div class="dropdown-menu menuHome" aria-labelledby="dropdown09">
-              <a class="dropdown-item nav-link scrollto active bi-house-door" href="#hero">Home</a>
-              <a class="dropdown-item nav-link scrollto bi bi-person-check-fill" href="#about">About</a>
-              <a class="dropdown-item nav-link scrollto bi bi-journal-bookmark" href="#details">Programs</a>
-              <a class="dropdown-item nav-link scrollto bi bi-images" href="#gallery">Gallery</a>
-              <a class="dropdown-item nav-link scrollto bi bi-people-fill" href="#team">Member</a>
-              <a class="dropdown-item nav-link scrollto bi bi-question-circle-fill" href="#faq">FAQ</a>
-              <a class="dropdown-item nav-link scrollto bi bi-telephone-fill" href="#contact">Contact</a>
+              <a class="dropdown-item nav-link scrollto active bi-house-door" href="{{ route('home') }}#hero">Home</a>
+              <a class="dropdown-item nav-link scrollto bi bi-person-check-fill" href="{{ route('home') }}#about">About</a>
+              <a class="dropdown-item nav-link scrollto bi bi-journal-bookmark" href="{{ route('home') }}#details">Programs</a>
+              <a class="dropdown-item nav-link scrollto bi bi-images" href="{{ route('home') }}#gallery">Gallery</a>
+              <a class="dropdown-item nav-link scrollto bi bi-people-fill" href="{{ route('home') }}#team">Member</a>
+              <a class="dropdown-item nav-link scrollto bi bi-question-circle-fill" href="{{ route('home') }}#faq">FAQ</a>
+              <a class="dropdown-item nav-link scrollto bi bi-telephone-fill" href="{{ route('home') }}#contact">Contact</a>
             </div>
           </li>
           <li class="nav-item">

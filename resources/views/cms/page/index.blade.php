@@ -30,7 +30,7 @@
             <h1>Dewan Keluarga Besar <span>Mahasiswa</span></h1>
             <h2>Universitas Multimedia Nusantara</h2>
             <div class="text-center text-lg-start">
-              <a href="#about" class="btn-get-started scrollto">About Us</a>
+              <a href="{{ route('resi') }}" class="btn-get-started scrollto">Check Your Aspirations</a>
             </div>
           </div>
         </div>
