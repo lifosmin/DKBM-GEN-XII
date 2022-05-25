@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
             'Jurusan' => 'Informatika',
             'nomorWA' => '088233632633',
             'ID_Line' => 'valls1901',
-            'password' => Hash::make('19012003')
+            'password' => Hash::make('TestingNgab')
         ]);
 
         Registration::create([
