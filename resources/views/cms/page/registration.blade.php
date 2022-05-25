@@ -1,15 +1,50 @@
   @extends('cms.base.app')
 
 @section('custom-css')
-  <link rel="stylesheet" href="{{ asset('css/registration.css') }}">
+<style>
+    .form{
+        width: 80%;
+        display: block;
+        margin: 20px auto;
+    }
+
+    .section-main{
+      min-height:100vh;
+      
+    }
+
+    body{
+      background-color: #f8fafc;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .btn-masuk{
+      transition: 0.2s;
+      color: white; 
+      background-color:rgba(1, 4, 136, 0.9)
+    }
+
+    .btn-masuk:hover{
+      transition: 0.2s;
+      color: white; 
+      background-color: rgb(2 5 106 / 90%);
+    }
+</style>
+  <!-- <link rel="stylesheet" href="{{ asset('css/registration.css') }}"> -->
 @endsection
 
 @section('content')
-<div class="container py-5 drought-form">
-  <div class="m-auto py-3 overlay-background justify-content-center d-flex flex-column text-center">
-      <h1 class="text-center m-auto text-white mt-3 form-title">DKBM Form Registration</h1>
-      <div class="container mt-1 d-flex justify-content-center m-auto">
-        <form action="{{ route('registration') }}" method="POST" class="formRegistration">
+
+<div class="section-main" >
+<div class="d-block w-100 mb-5" style="height: 80px; background-color: rgb(1, 4, 136)"></div>
+  <div class="container h-100 m-auto p-3" style="background-color: white; box-shadow: 0px 3.76545px 3.76545px rgba(0, 0, 0, 0.25); border-radius:25px">
+    <h1 class="text-center">SELAMAT DATANG!</h1>
+    @if (session('status'))
+        <div style="color:red; font-size:0.8em; margin:auto; text-align:center;">
+            {{ session('status') }}
+        </div>
+    @endif
+    <form action="{{ route('registration') }}" method="POST" class="formRegistration">
             @csrf
             <div class="mb-0">
               <label for="input-nama" class="form-label"></label>
@@ -90,18 +125,17 @@
             @enderror
 
             <div class="d-flex justify-content-center w-100 flex-column text-center">
-              <a href="#" class="button-submit mx-auto fw-bold mt-4" id="register-submit">REGISTER</a>
+              <a href="#" class="btn btn-masuk mx-auto fw-bold mt-4" id="register-submit">REGISTER</a>
             </div>
         </form>
-    </div>
 
-    
-    <div class="d-flex justify-content-center w-100 flex-column text-center text-dark-grey">
-      <p class="mt-1 pt-3 mb-0 text-center">Already have an account ? <a href="{{ route('login') }}" class="text-decoration-underline text-white fw-bolder">Login here!</a></p>
-      <p class="contact-us text-center px-5">If you are having trouble logging in, please <a href="http://line.me/ti/p/~@471dpxdr" class="text-decoration-underline text-white fw-bolder">contact us</a> through our LINE Official Account</p>
-    </div>
+      <p class="description mt-2">
+          Sudah memiliki akun? Login Sekarang! <a style="color:rgba(1, 4, 136, 0.9)" href="{{ url("/registration") }}">Login</a>
+      </p>
+    </form>
   </div>
 </div>
+
 @endsection
 
 @section('custom-js')
