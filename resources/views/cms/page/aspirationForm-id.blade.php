@@ -1,12 +1,49 @@
 @extends('cms.base.app')
 
 @section('custom-css')
+<style>
+    .form{
+        width: 80%;
+        display: block;
+        margin: 20px auto;
+    }
+
+    .section-main{
+      min-height:100vh;
+      
+    }
+
+    body{
+      background-color: #f8fafc;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .btn-masuk{
+      transition: 0.2s;
+      color: white; 
+      background-color:rgba(1, 4, 136, 0.9)
+    }
+
+    .btn-masuk:hover{
+      transition: 0.2s;
+      color: white; 
+      background-color: rgb(2 5 106 / 90%);
+    }
+</style>
     <link rel="stylesheet" href="{{ asset('css/aspiration.css') }}">
     <link rel="stylesheet" href="{{ asset('css/validation.css') }}">
 @endsection
 
 @section('content')
-<div class="container">
+<div class="section-main" >
+<div class="d-block w-100 mb-5" style="height: 80px; background-color: rgb(1, 4, 136)"></div>
+  <div class="container h-100 m-auto p-3" style="background-color: white; box-shadow: 0px 3.76545px 3.76545px rgba(0, 0, 0, 0.25); border-radius:25px">
+  <h1 class="text-center">Form Aspirasi</h1>
+    @if (session('status'))
+        <div style="color:red; font-size:0.8em; margin:auto; text-align:center;">
+            {{ session('status') }}
+        </div>
+    @endif
     <form action="{{ route('verifikasiAspirasi') }}" method="POST" class="form-margin" id="form-aspirasi">
         @csrf
         <h1 class="text-center">Form Aspirasi</h1>
@@ -43,9 +80,11 @@
                 </div>
             @enderror
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-masuk">Submit</button>
     </form>
+  </div>
 </div>
+
 @endsection
 
 @section('custom-js')
