@@ -19,15 +19,13 @@ $(document).ready(function () {
             reverseButtons: true,
         }).then((result) => {
         if (result.isConfirmed) {
+            const formRegistration = document.querySelector(".formRegistration");
+            formRegistration.submit();
+        } else {
             swalWithBootstrapButtons.fire({
-                title: "Pendaftaran berhasil dilakukan!",
-                text: "Registrasi Anda berhasil dilakukan, Anda bisa memberikan aspirasi Anda kepada DKBM melalui form aspirasi.",
+                title: "Pendaftaran dibatalkan!",
+                text: "Silahkan perhatikan kembali data yang anda isi!",
                 confirmButtonText: "Okay",
-            }).then((result) => {
-                if(result.isConfirmed) {
-                    const formRegistration = document.querySelector(".formRegistration");
-                    formRegistration.submit();
-                }
             });
         }
         });
