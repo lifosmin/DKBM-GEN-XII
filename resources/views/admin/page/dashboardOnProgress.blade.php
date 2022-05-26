@@ -27,13 +27,18 @@
                         <td>{{ $i++ }}</td>
                         <td>{{ $item->Resi }}</td>
                         <td>{{ $item->Kategori }}</td>
-                        <td>{{ $item->Status }}</td>
+                        <td>
+                          <div
+                                class="resi-status-{{ Str::lower(implode('-', explode(' ', $item->Status))) }} d-flex justify-content-center align-items-center">
+                                {{ Str::upper($item->Status) }}
+                            </div>
+                        </td>
                         {{-- <td><button id="moreData{{ $item->id }}" class="btn btn-primary">View More</button></td> --}}
                         {{-- Modal Buat nampilin Isi + kasi solusi sekalian ubah status pake button aja, abis itu email solusi ke email orang nya --}}
                         <td>
                             <button type="button" class="btn btn-primary" data-toggle="modal"
                                 data-target="#moreDataModal{{ $item->id }}">
-                                Launch demo modal
+                                View More
                             </button>
                         </td>
                     </tr>

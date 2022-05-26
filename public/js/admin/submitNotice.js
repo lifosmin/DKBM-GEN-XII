@@ -1,12 +1,13 @@
 var modalSubmit = $(".modal-submit");
 
 $(document).ready(function () {
-    [...modalSubmit].forEach(function (eachModal) {
-        modalSubmit.click(function () {
+    [...modalSubmit].forEach(function (eachButton) {
+      console.log(eachButton);
+        eachButton.addEventListener("click", function () {
             const swalWithBootstrapButtons = Swal.mixin({
                 customClass: {
                     confirmButton: "btn btn-success",
-                    cancelButton: "btn btn-danger",
+                    cancelButton: "btn btn-danger me-3",
                 },
                 buttonsStyling: false,
             });
@@ -22,11 +23,11 @@ $(document).ready(function () {
                 })
                 .then((result) => {
                     if (result.isConfirmed) {
-                        var solusi = document.querySelector("#solusi");
+                        var solusi = this.parentNode;
+                        solusi = solusi.querySelector("#solusi");
                         if (solusi.value != "") {
-                            const formAspirasi =
-                                document.querySelector(".formAspirasi");
-                            formAspirasi.submit();
+                          const form = this.parentNode;
+                          form.submit();
                         } else {
                             swalWithBootstrapButtons.fire({
                                 title: "Solusi masih kosong!",

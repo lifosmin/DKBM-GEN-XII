@@ -57,7 +57,7 @@ class DatabaseSeeder extends Seeder
             'User_id' => 2,
             'Kategori' => 'Non-Akademik',
             'Isi' => 'Testing yuuuhuuuu',
-            'Status' => 'Finished',
+            'Status' => 'On Progress',
             'Solusi' => "Kepoo yaaaa !!????"
         ]);
 
@@ -75,8 +75,8 @@ class DatabaseSeeder extends Seeder
             'User_id' => 2,
             'Kategori' => 'Fasilitas',
             'Isi' => 'Another Testing Gan',
-            'Status' => 'On Progress',
-            'Solusi' => "sabar yaa"
+            'Status' => 'Pending',
+            'Solusi' => null
         ]);
 
         Aspiration::create([
@@ -84,8 +84,8 @@ class DatabaseSeeder extends Seeder
             'User_id' => 2,
             'Kategori' => 'Fasilitas',
             'Isi' => 'TESTING TEROOOSSS...',
-            'Status' => 'On Progress',
-            'Solusi' => "sabar yaa"
+            'Status' => 'Pending',
+            'Solusi' => null
         ]);
     }
 }

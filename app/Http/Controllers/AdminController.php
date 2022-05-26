@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use App\Mail\SolusiMail;
 use App\Models\Registration;
 use Illuminate\Support\Facades\Mail;
+use Monolog\Registry;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class AdminController extends Controller
@@ -16,14 +17,22 @@ class AdminController extends Controller
     public function index(){
         return view('admin.page.dashboard',[
             'title' => 'DKBM UMN - Dashboard Admin',
-            'items' => Aspiration::All()->where('Status', "Pending")
+            'items' => Aspiration::All()->where('Status', "Pending"),
+            'pendingCount' => Aspiration::all()->where('Status', 'Pending')->count(),
+            'onProgressCount' => Aspiration::all()->where('Status', 'On Progress')->count(),
+            'finishedCount' => Aspiration::all()->where('Status', 'Finished')->count(),
+            'userCount' => Registration::all()->count()
         ]);
     }
 
     public function finished(){
         return view('admin.page.dashboardFinished',[
             'title' => 'DKBM UMN - Dashboard Admin',
-            'items' => Aspiration::All()->where('Status',"Finished")
+            'items' => Aspiration::All()->where('Status',"Finished"),
+            'pendingCount' => Aspiration::all()->where('Status', 'Pending')->count(),
+            'onProgressCount' => Aspiration::all()->where('Status', 'On Progress')->count(),
+            'finishedCount' => Aspiration::all()->where('Status', 'Finished')->count(),
+            'userCount' => Registration::all()->count()
         ]);
     }
 
@@ -31,14 +40,22 @@ class AdminController extends Controller
         return view('admin.page.dashboardOnProgress',[
             'title' => 'DKBM UMN - Dashboard Admin',
             'items' => Aspiration::All()->where('Status',"On Progress"),
-            'users' => Registration::all()
+            'users' => Registration::all(),
+            'pendingCount' => Aspiration::all()->where('Status', 'Pending')->count(),
+            'onProgressCount' => Aspiration::all()->where('Status', 'On Progress')->count(),
+            'finishedCount' => Aspiration::all()->where('Status', 'Finished')->count(),
+            'userCount' => Registration::all()->count()
         ]);
     }
 
     public function dataUser(){
         return view('admin.page.dataUser',[
             'title' => 'DKBM UMN - Dashboard Admin',
-            'items' => Registration::All()
+            'items' => Registration::All(),
+            'pendingCount' => Aspiration::all()->where('Status', 'Pending')->count(),
+            'onProgressCount' => Aspiration::all()->where('Status', 'On Progress')->count(),
+            'finishedCount' => Aspiration::all()->where('Status', 'Finished')->count(),
+            'userCount' => Registration::all()->count()
         ]);
     }
 
@@ -101,7 +118,7 @@ class AdminController extends Controller
         $data->save();
 
         // Email
-        $this->sendEmail($ValidRequest, $request);
+        // $this->sendEmail($ValidRequest, $request);
 
         Alert::success('Solusi dan Status berhasil diubah', 'Mahasiswa dengan resi tersebut akan menerima email balasan');
 
@@ -119,7 +136,7 @@ class AdminController extends Controller
         $data->save();
 
         // Email
-        $this->sendEmail($ValidRequest, $request);
+        // $this->sendEmail($ValidRequest, $request);
 
         Alert::success('Solusi dan Status berhasil diubah', 'Mahasiswa dengan resi tersebut akan menerima email balasan');
 

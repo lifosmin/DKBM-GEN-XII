@@ -76,3 +76,41 @@
     color: black;
     text-align: justify;
 }
+[class*="resi-status"] {
+  border: 1px solid rgb(152, 152, 152);
+  width: 9rem;
+}
+
+.resi-background-status-pending,
+.resi-status-pending {
+  background-color: rgb(255, 22, 22) !important;
+  color: white;
+}
+
+.resi-background-status-on-progress,
+.resi-status-on-progress {
+  background-color: rgb(2, 62, 245) !important;
+  color: white;
+}
+
+.resi-background-status-finished,
+.resi-status-finished {
+  background-color: rgba(2, 255, 49, 1) !important;
+}
+
+.resi-status-pending {
+  padding: .1rem 1rem;
+  border-radius: 7px;
+  color: white;
+}
+
+.resi-status-finished {
+  padding: .1rem 1rem;
+  border-radius: 7px;
+}
+
+.resi-status-on-progress {
+  padding: .1rem 1rem;
+  border-radius: 7px;
+  color: white;
+}

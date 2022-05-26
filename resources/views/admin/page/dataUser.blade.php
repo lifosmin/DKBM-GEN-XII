@@ -35,10 +35,10 @@
                     <td>{{ $item->nomorWA }}</td>
                     <td>{{ $item->ID_Line }}</td>
                     <td>
-                        <button id="edit{{$item->id}}" class="btn btn-primary">Edit User</button>
+                        <button id="edit{{$item->id}}" class="btn btn-primary w-100 mb-2">Edit User</button>
                         <form action="/admin/dashboard-delete-user/{{ $item->id }}" method="GET" class="deleteUser{{ $item->id }}">
                             @csrf
-                            <a href="#" class="btn button-delete text-dark w-100" id="{{ $item->id }}">Delete User</a>
+                            <a href="#" class="btn w-100 button-delete text-dark w-100" id="{{ $item->id }}">Delete User</a>
                         </form>
                     </td>
                 </tr>
