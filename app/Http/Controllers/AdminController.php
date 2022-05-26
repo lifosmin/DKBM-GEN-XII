@@ -118,7 +118,7 @@ class AdminController extends Controller
         $data->save();
 
         // Email
-        // $this->sendEmail($ValidRequest, $request);
+        $this->sendEmail($ValidRequest, $request);
 
         Alert::success('Solusi dan Status berhasil diubah', 'Mahasiswa dengan resi tersebut akan menerima email balasan');
 
@@ -136,7 +136,7 @@ class AdminController extends Controller
         $data->save();
 
         // Email
-        // $this->sendEmail($ValidRequest, $request);
+        $this->sendEmail($ValidRequest, $request);
 
         Alert::success('Solusi dan Status berhasil diubah', 'Mahasiswa dengan resi tersebut akan menerima email balasan');
 
