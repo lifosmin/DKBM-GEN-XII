@@ -42,6 +42,10 @@
     cursor: pointer;
 }
 
+.modal-backdrop {
+  z-index: -1 !important;
+}
+
 .data-modal-header {
     padding: 10px 16px;
     background-color: rgba(1, 4, 136, 0.9);;

@@ -54,7 +54,7 @@ class DatabaseSeeder extends Seeder
 
         Aspiration::create([
             'Resi' =>'SC50597SHFW',
-            'User_id' => 1,
+            'User_id' => 2,
             'Kategori' => 'Non-Akademik',
             'Isi' => 'Testing yuuuhuuuu',
             'Status' => 'Finished',
@@ -63,11 +63,29 @@ class DatabaseSeeder extends Seeder
 
         Aspiration::create([
             'Resi' =>'SC50597K2H3',
-            'User_id' => 1,
+            'User_id' => 2,
             'Kategori' => 'Fasilitas',
             'Isi' => 'Testing lagi gaann',
             'Status' => 'Pending',
             'Solusi' => null
+        ]);
+
+        Aspiration::create([
+            'Resi' =>'SC50597K3J2',
+            'User_id' => 2,
+            'Kategori' => 'Fasilitas',
+            'Isi' => 'Another Testing Gan',
+            'Status' => 'On Progress',
+            'Solusi' => "sabar yaa"
+        ]);
+
+        Aspiration::create([
+            'Resi' =>'SC50597K322',
+            'User_id' => 2,
+            'Kategori' => 'Fasilitas',
+            'Isi' => 'TESTING TEROOOSSS...',
+            'Status' => 'On Progress',
+            'Solusi' => "sabar yaa"
         ]);
     }
 }

@@ -4,6 +4,21 @@
     box-sizing: border-box;
 }
 
+.col-sm-12 {
+  overflow-x: scroll;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.col-sm-12::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.col-sm-12 {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 .main-container {
     min-height: 50vh;
 }
@@ -35,16 +50,65 @@ input[type="text"] {
 }
 
 .modal-content {
-    box-shadow: 0 0 23px -2px rgba(0, 0, 0, 0.2) inset;
-    -webkit-box-shadow: 4px 4px 23px -2px rgba(0, 0, 0, 0.36) inset;
-    -moz-box-shadow: 4px 4px 23px -2px rgba(0, 0, 0, 0.2) inset;
+    min-width: 300px !important;
+    box-shadow: 0 0 23px -2px rgba(0, 0, 0, 0.1) inset;
+    -webkit-box-shadow: 4px 4px 23px -2px rgba(0, 0, 0, 0.16) inset;
+    -moz-box-shadow: 4px 4px 23px -2px rgba(0, 0, 0, 0.1) inset;
     /* border: 5px solid rgba(100, 100, 100, 1); */
     border-radius: 10px;
 }
 
 .modal-close-button {
   top: 8%;
-  right: 40px;
+  right: 40px;  
+}
+
+.modal-logged-in-close-button {
+  top: 1%;
+  right: 3%;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 2rem;
+}
+
+[class*="resi-status"] {
+  border: 1px solid rgb(152, 152, 152);
+  width: 9rem;
+}
+
+.resi-background-status-pending,
+.resi-status-pending {
+  background-color: rgb(255, 22, 22) !important;
+  color: white;
+}
+
+.resi-background-status-on-progress,
+.resi-status-on-progress {
+  background-color: rgb(2, 62, 245) !important;
+  color: white;
+}
+
+.resi-background-status-finished,
+.resi-status-finished {
+  background-color: rgba(2, 255, 49, 1) !important;
+}
+
+.resi-status-pending {
+  padding: .1rem 1rem;
+  border-radius: 7px;
+  color: white;
+}
+
+.resi-status-finished {
+  padding: .1rem 1rem;
+  border-radius: 7px;
+}
+
+.resi-status-on-progress {
+  padding: .1rem 1rem;
+  border-radius: 7px;
+  color: white;
 }
 
 @media screen and (max-width: 400px) {

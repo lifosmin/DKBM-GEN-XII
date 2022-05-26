@@ -23,6 +23,7 @@
                     <tr>
                         <th>Resi ID</th>
                         <th>Aspirasi</th>
+                        <th>Status</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -32,7 +33,13 @@
                         <tr>
                             <td>{{ $aspiration->Resi }}</td>
                             <td>{{ $aspiration->Isi }}</td>
-                            <td><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resi-modal-{{ $aspiration->Resi }}">Details</button></td>
+                            <td>
+                                <div
+                                    class="resi-status-{{ Str::lower(implode('-', explode(' ', $aspiration->Status))) }} d-flex justify-content-center align-items-center">
+                                    {{ Str::upper($aspiration->Status) }}</div>
+                            </td>
+                            <td><button class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#resi-modal-{{ $aspiration->Resi }}">Details</button></td>
                         </tr>
                     @endforeach
                 </tbody>
@@ -43,17 +50,28 @@
 
             {{-- ASPIRATION MODALS --}}
             @foreach ($aspirations as $aspiration)
-                <div class="modal fade" id="resi-modal-{{ $aspiration->Resi }}" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
+                <div class="modal fade" id="resi-modal-{{ $aspiration->Resi }}" tabindex="-1"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-                        <div class="modal-content">
-                            <div
-                                class="modal-body p-5 py-3 d-flex flex-column justify-content-evenly align-items-center gap-3">
+                        <div class="modal-content px-2">
+                            <div class="position-relative modal-body p-5 py-3 d-flex flex-column justify-content-evenly align-items-center gap-3">
+                                <button type="button" class="close modal-logged-in-close-button position-absolute" data-bs-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+
                                 <div class="resi-item w-100">
                                     <div class="resi-description fs-5 fw-bold mb-2">RESI</div>
 
                                     <div class="resi-value rounded p-3">
                                         {{ $aspiration->Resi }}
+                                    </div>
+                                </div>
+
+                                <div class="resi-item w-100">
+                                    <div class="resi-description fs-5 fw-bold mb-2">STATUS</div>
+
+                                    <div class="resi-value rounded p-3 fw-bold resi-background-status-{{ Str::lower(implode('-', explode(' ', $aspiration->Status))) }}">
+                                        {{ Str::upper($aspiration->Status) }}
                                     </div>
                                 </div>
 
@@ -66,26 +84,18 @@
                                 </div>
 
                                 <div class="resi-item w-100">
+                                    <div class="resi-description fs-5 fw-bold mb-2">JAWABAN</div>
+
+                                    <div class="resi-value rounded p-3">
+                                        {{ $aspiration->Solusi ?? '-' }}
+                                    </div>
+                                </div>
+
+                                <div class="resi-item w-100">
                                     <div class="resi-description fs-5 fw-bold mb-2">TANGGAL</div>
 
                                     <div class="resi-value rounded p-3">
                                         {{ $aspiration->created_at }}
-                                    </div>
-                                </div>
-
-                                <div class="resi-item w-100">
-                                    <div class="resi-description fs-5 fw-bold mb-2">JAWABAN</div>
-
-                                    <div class="resi-value rounded p-3">
-                                        {{ $aspiration->Solusi ?? '-'  }}
-                                    </div>
-                                </div>
-                                
-                                <div class="resi-item w-100">
-                                    <div class="resi-description fs-5 fw-bold mb-2">STATUS</div>
-
-                                    <div class="resi-value rounded p-3">
-                                        {{ $aspiration->Status }}
                                     </div>
                                 </div>
                             </div>

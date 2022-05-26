@@ -15,19 +15,22 @@
     <div class="container main-container">
         <h1 class="text-center">Cek Resi</h1>
 
-        @if($aspiration == null)
-          <div class="alert-container d-flex justify-content-center align-items-center">
-            <div class="alert alert-danger d-inline-block m-0">Aspirasi dengan ID : {{ request('Resi') }} tidak terdaftar dalam database!</div>
-          </div>
+        @if ($aspiration == null)
+            <div class="alert-container d-flex justify-content-center align-items-center">
+                <div class="alert alert-danger d-inline-block m-0">Aspirasi dengan ID : {{ request('Resi') }} tidak
+                    terdaftar dalam database!</div>
+            </div>
         @endif
         <div class="container d-flex justify-content-center align-items-center mt-4">
             <div class="form-container col-md-6 col-12 rounded">
                 <div class="form-group mb-3 position-relative">
-                  <form action="{{ route('cekResi') }}">
-                    @csrf
-                    <input type="text" class="form-control rounded-pill p-3" placeholder="Input nomor resi..." name="Resi">
-                    <button class="search-button position-absolute" type="submit" id="button-addon2"><i class="fa fa-search"></i></button>
-                  </form>
+                    <form action="{{ route('cekResi') }}">
+                        @csrf
+                        <input type="text" class="form-control rounded-pill p-3" placeholder="Input nomor resi..."
+                            name="Resi">
+                        <button class="search-button position-absolute" type="submit" id="button-addon2"><i
+                                class="fa fa-search"></i></button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -39,8 +42,12 @@
         <div class="modal fade" id="resi-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
                 <div class="modal-content">
-                    <div class="position-relative modal-body p-5 py-5 d-flex flex-column justify-content-evenly align-items-center gap-3">
-                        <button type="button" data-bs-dismiss="modal" class="btn-close modal-close-button position-absolute" aria-label="Close"></button>
+                    <div
+                        class="position-relative modal-body p-5 py-5 d-flex flex-column justify-content-evenly align-items-center gap-3">
+                        <button type="button" class="close modal-logged-in-close-button position-absolute"
+                            data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
 
                         <div class="resi-item w-100">
                             <div class="resi-description fs-5 fw-bold mb-2">RESI</div>
@@ -51,17 +58,19 @@
                         </div>
 
                         <div class="resi-item w-100">
+                            <div class="resi-description fs-5 fw-bold mb-2">STATUS</div>
+
+                            <div
+                                class="resi-value rounded p-3 fw-bold resi-background-status-{{ Str::lower(implode('-', explode(' ', $aspiration->Status))) }}">
+                                {{ Str::upper($aspiration->Status) }}
+                            </div>
+                        </div>
+
+                        <div class="resi-item w-100">
                             <div class="resi-description fs-5 fw-bold mb-2">TANGGAL</div>
 
                             <div class="resi-value rounded p-3">
                                 {{ $aspiration->created_at }}
-                            </div>
-                        </div>
-                        <div class="resi-item w-100">
-                            <div class="resi-description fs-5 fw-bold mb-2">STATUS</div>
-
-                            <div class="resi-value rounded p-3">
-                                {{ $aspiration->Status }}
                             </div>
                         </div>
                     </div>

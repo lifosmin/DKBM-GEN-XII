@@ -30,7 +30,8 @@ class AdminController extends Controller
     public function onProgress(){
         return view('admin.page.dashboardOnProgress',[
             'title' => 'DKBM UMN - Dashboard Admin',
-            'items' => Aspiration::All()->where('Status',"On Progress")
+            'items' => Aspiration::All()->where('Status',"On Progress"),
+            'users' => Registration::all()
         ]);
     }
 
