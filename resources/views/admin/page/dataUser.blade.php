@@ -77,13 +77,13 @@
                 <input type="hidden" name="id" value="{{ $item->id }}">
 
                 <label for="Nama">Nama</label>
-                <input type="text" name="Nama" class="form-control" id="Nama" value={{ $item->Nama }}>
+                <input type="text" name="Nama" class="form-control" id="Nama" value="{{ $item->Nama }}">
 
                 <label for="Email">Email</label>
-                <input type="email" name="Email" class="form-control" id="Email" value={{ $item->Email }}>
+                <input type="email" name="Email" class="form-control" id="Email" value="{{ $item->Email }}">
 
                 <label for="NIM">NIM</label>
-                <input type="text" name="NIM" class="form-control" id="NIM" value={{ $item->NIM }}>
+                <input type="text" name="NIM" class="form-control" id="NIM" value="{{ $item->NIM }}">
 
                 <label for="Jurusan">Jurusan</label>
                 <select class="form-select form-select-md" name="Jurusan">
@@ -103,10 +103,10 @@
                 </select>
 
                 <label for="nomorWA">Nomor WhatsApp</label>
-                <input type="text" name="nomorWA" class="form-control" id="nomorWA" value={{ $item->nomorWA }}>
+                <input type="text" name="nomorWA" class="form-control" id="nomorWA" value="{{ $item->nomorWA }}">
 
                 <label for="ID_Line">ID Line</label>
-                <input type="text" name="ID_Line" class="form-control" id="ID_Line" value={{ $item->ID_Line }}>
+                <input type="text" name="ID_Line" class="form-control" id="ID_Line" value="{{ $item->ID_Line }}">
 
                 <label for="password">Change Password</label>
                 <input type="password" name="password" class="form-control" id="password" placeholder="New Password">

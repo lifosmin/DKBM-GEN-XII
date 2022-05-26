@@ -52,7 +52,7 @@
             </div>
             @error('Nama')
                 <div class="alert alert-danger p-2 mb-0">
-                    Nama hanya boleh mengandung karakter a-z dan spasi!
+                  {{ $message }}
                 </div>
             @enderror
 
@@ -62,13 +62,18 @@
             </div>
             @error('Email')
                 <div class="alert alert-danger p-2 mb-0">
-                    Pastikan email anda valid dan berakhiran student.umn.ac.id atau lecturer.umn.ac.id
+                  {{ $message }}
                 </div>
             @enderror
 
             <div class="mb-0">
               <label for="input-password" class="form-label"></label>
               <input type="password" class="form-control @error('password') is-invalid @enderror" id="input-password" name="password" placeholder="Password">
+              @error('password')
+                <div class="alert alert-danger p-2 mb-0">
+                  {{ $message }}
+                </div>
+              @enderror
               <div class="text-start justify-content-start mt-2">
                 <input type="checkbox" id="showPassword"> Show Password
               </div>
@@ -80,7 +85,7 @@
             </div>
             @error('NIM')
               <div class="alert alert-danger p-2 mb-0">
-                  Pastikan nim anda benar dan didahului dengan 000000
+                {{ $message }}
               </div>
             @enderror 
 
@@ -108,7 +113,7 @@
               <input type="text" class="form-control @error('nomorWA') is-invalid @enderror" id="input-nomorWA" name="nomorWA" value="{{ old('nomorWA') }}" placeholder="Nomor WA">
               @error('nomorWA')
                 <div class="alert alert-danger p-2 mb-0">
-                    Data Nomor WA harus diisi!
+                  {{ $message }}
                 </div>
               @enderror
             </div>
@@ -116,13 +121,12 @@
             <div class="mb-0">
               <label for="input-ID_Line" class="form-label"></label>
               <input type="text" class="form-control @error('ID_Line') is-invalid @enderror"  id="input-ID_Line" name="ID_Line" value="{{ old('ID_Line') }}" placeholder="ID Line">
+              @error('ID_Line')
+                <div class="alert alert-danger p-2 mb-0">
+                  {{ $message }}
+                </div>
+              @enderror
             </div>
-
-            @error('ID_Line')
-              <div class="alert alert-danger p-2 mb-0">
-                  Data ID Line harus diisi!
-              </div>
-            @enderror
 
             <div class="d-flex justify-content-center w-100 flex-column text-center">
               <a href="#" class="btn btn-masuk mx-auto fw-bold mt-4" id="register-submit">REGISTER</a>

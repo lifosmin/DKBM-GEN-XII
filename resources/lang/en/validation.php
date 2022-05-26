@@ -96,7 +96,7 @@ return [
     'password' => 'The password is incorrect.',
     'present' => 'The :attribute field must be present.',
     'regex' => 'The :attribute format is invalid.',
-    'required' => 'The :attribute field is required.',
+    'required' => 'Kolom :attribute belum terisi.',
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_unless' => 'The :attribute field is required unless :other is in :values.',
     'required_with' => 'The :attribute field is required when :values is present.',
@@ -130,9 +130,31 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'Nama' => [
+            'regex' => 'Nama hanya boleh mengandung karakter a-z dan spasi!',
         ],
+        'Email' => [
+            'regex' => 'Pastikan email Anda valid dan berakhiran student.umn.ac.id atau lecturer.umn.ac.id',
+            'email' => 'Isilah kolom diatas dengan email Anda',
+            'unique' => 'Email Anda sudah terdaftar!'
+        ],
+        'password' => [
+            'min' => 'Password Anda harus mengandung minimal :min karakter.',
+            'regex' => 'Pastikan password anda mengandung minimal 1 huruf besar, 1 huruf kecil, dan 1 angka',
+        ],
+        'NIM' => [
+            'required' => 'Kolom NIM belum terisi.',
+            'regex' => 'Pastikan NIM Anda benar dan didahului dengan 000000',
+            'unique' => 'NIM Anda sudah terdaftar!'
+        ],
+        'nomorWA' => [
+            'required' => 'Kolom nomor WA belum terisi.',
+            'unique' => 'Nomor WA Anda sudah terdaftar!'
+        ],
+        'ID_Line' => [
+            'required' => 'Kolom ID Line belum terisi.',
+            'unique' => 'ID Line Anda sudah terdaftar!'
+        ]
     ],
 
     /*

@@ -82,15 +82,12 @@ class RegistrationController extends Controller
     request()->session()->regenerateToken();
 
     return redirect(route('home-id'));
-}
-
-  function register() {
   }
 
   public function registration() {
     return view("cms.page.registration", [
       "title" => "Registration",
-      "language" => "indonesia"
+      "language" => "English"
     ]);
   }
 
@@ -98,11 +95,11 @@ class RegistrationController extends Controller
     $validReq = $request->validate([
       'Nama' => 'required|regex:/[a-zA-Z]+$/x',
       'Email' => ['required', 'email:dns', 'regex:/^.+@(student\.umn\.ac\.id|lecturer\.umn\.ac\.id|umn\.ac\.id)$/', 'unique:registrations,Email'],
-      'password' => 'required',
+      'password' => 'required|string|min:8|regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/',
       'NIM' => 'required|regex:/000000(\d{5})/|unique:registrations,NIM',
       'Jurusan' => 'required',
-      'nomorWA' => 'required',
-      'ID_Line' => 'required',
+      'nomorWA' => 'required|unique:registrations,nomorWA',
+      'ID_Line' => 'required|unique:registrations,ID_Line',
     ]);
 
     $validReq['password'] = Hash::make($validReq['password']);
