@@ -44,7 +44,6 @@
             <a class="nav-link dropdown-toggle" href="#" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" data-bs-auto-close="true" aria-expanded="false"> </span> Welcome, {{ Auth::guard('users')->user()->Nama }}</a>
             <div class="dropdown-menu" aria-labelledby="dropdown09">
                 <a class="dropdown-item" href="{{ route('aspirationForm') }}" style="color: black; padding-right:10px;">  Aspiration Form</a>
-                <a class="dropdown-item" href="{{ route('resi') }}" style="color: black; padding-right:10px;">  Resi Check</a>
                 <a class="dropdown-item" href="{{ route('logout') }}" style="color: black; padding-right:10px;">  Logout</a>
             </div>
           </li>
