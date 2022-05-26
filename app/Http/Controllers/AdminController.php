@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use App\Mail\SolusiMail;
 use App\Models\Registration;
 use Illuminate\Support\Facades\Mail;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AdminController extends Controller
 {
@@ -62,11 +63,19 @@ class AdminController extends Controller
         }
         $data->save();
 
+        Alert::success('Data user berhasil diubah!');
+
         return redirect(route('dataUser'));
     }
 
     public function deleteUser(Registration $registration){
-        $delete = Registration::where('id', $registration->id)->delete();
+        $user = Registration::where('id', $registration->id);
+        $aspirasi = Aspiration::All()->where('User_id', $user->first()->id);
+        foreach($aspirasi as $asp){
+            $asp->delete();
+        }
+        $delete = $user->delete();
+        Alert::success('Data user berhasil dihapus!');
         return redirect(route('dataUser'));
     }
 
@@ -93,6 +102,8 @@ class AdminController extends Controller
         // Email
         $this->sendEmail($ValidRequest, $request);
 
+        Alert::success('Solusi dan Status berhasil diubah', 'Mahasiswa dengan resi tersebut akan menerima email balasan');
+
         return redirect(route('admin'));
     }
 
@@ -108,6 +119,8 @@ class AdminController extends Controller
 
         // Email
         $this->sendEmail($ValidRequest, $request);
+
+        Alert::success('Solusi dan Status berhasil diubah', 'Mahasiswa dengan resi tersebut akan menerima email balasan');
 
         return redirect(route('adminOnProgress'));
     }

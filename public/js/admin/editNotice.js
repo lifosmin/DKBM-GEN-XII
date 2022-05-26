@@ -25,15 +25,8 @@ $(document).ready(function () {
             reverseButtons: true,
         }).then((result) => {
         if (result.isConfirmed) {
-            swalWithBootstrapButtons.fire({
-                title: "Data User berhasil di hapus!",
-                confirmButtonText: "Okay",
-            }).then((result) => {
-                if(result.isConfirmed) {
-                    const formDeleteUser = document.querySelector(`.deleteUser${id}`);
-                    formDeleteUser.submit();
-                }
-            });
+            const formDeleteUser = document.querySelector(`.deleteUser${id}`);
+            formDeleteUser.submit();
         } else if (result.dismiss === Swal.DismissReason.cancel) {
             swalWithBootstrapButtons.fire(
                 "Penghapusan Data User dibatalkan!",
@@ -62,15 +55,8 @@ $(document).ready(function () {
             reverseButtons: true,
         }).then((result) => {
         if (result.isConfirmed) {
-            swalWithBootstrapButtons.fire({
-                title: "Data User berhasil di edit!",
-                confirmButtonText: "Okay",
-            }).then((result) => {
-                if(result.isConfirmed) {
-                    const formEditUser = document.querySelector(".formEditUser");
-                    formEditUser.submit();
-                }
-            });
+            const formEditUser = document.querySelector(".formEditUser");
+            formEditUser.submit();
         } else if (result.dismiss === Swal.DismissReason.cancel) {
             swalWithBootstrapButtons.fire(
                 "Pengubahan Data User dibatalkan!",

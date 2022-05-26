@@ -30,7 +30,7 @@
   <link href="{{ asset('css/style_timeline.css') }}" rel="stylesheet">
 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
-
+  
   <!-- =======================================================
   * Template Name: Bootslander - v4.3.0
   * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
@@ -43,6 +43,7 @@
 </head>
 
 <body>
+    @include('sweetalert::alert', ['cdn' => "https://cdn.jsdelivr.net/npm/sweetalert2@9"])
     @if($language == "Indonesia")
         @include('cms.base.navbar-id')
     @else

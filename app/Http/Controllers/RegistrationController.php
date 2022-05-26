@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Registration;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class RegistrationController extends Controller
 {
@@ -106,6 +107,8 @@ class RegistrationController extends Controller
 
     $validReq['password'] = Hash::make($validReq['password']);
     Registration::create($validReq);
+
+    Alert::success('Pendaftaran akun berhasil!','Terimakasih sudah mendaftar di web DKBM. Anda bisa memberikan aspirasi Anda mulai dari sekarang.');
 
     return redirect()->route("login");
   }

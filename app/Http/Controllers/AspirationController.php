@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Aspiration;
+use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use App\Models\Registration;
+use App\Mail\ResiMail;
+use Illuminate\Support\Facades\Mail;
 
 class AspirationController extends Controller {
 
@@ -46,6 +49,15 @@ class AspirationController extends Controller {
         
         Aspiration::create($ValidRequest);
 
+        $user = Aspiration::where('Resi', $ValidRequest['Resi'])->first();
+
+        $dataUser['nama'] = $user->user_send->Nama;
+        $dataUser['Email'] = $user->user_send->Email;
+
+        $this->sendEmail($ValidRequest, $dataUser);
+
+        Alert::success('Your aspiration has been successfully submitted!','You can check your resi ID in your email student');
+
         return redirect(route('home'));
     }
 
@@ -60,6 +72,15 @@ class AspirationController extends Controller {
         $ValidRequest['Status'] = "Pending";
 
         Aspiration::create($ValidRequest);
+
+        $user = Aspiration::where('Resi', $ValidRequest['Resi'])->first();
+
+        $dataUser['nama'] = $user->user_send->Nama;
+        $dataUser['Email'] = $user->user_send->Email;
+
+        $this->sendEmail($ValidRequest, $dataUser);
+
+        Alert::success('Aspirasi berhasil ditampung!','Cek email mahasiswa untuk mendapatkan resi');
 
         return redirect(route('home-id'));
     }
@@ -86,5 +107,17 @@ class AspirationController extends Controller {
           'language' => "Indonesia",
           'aspiration' => $aspiration
       ]);
+    }
+
+    //SEND EMAIL
+    public function sendEmail($data, $user)
+    {
+        $details = [
+            'title' => 'New Aspiration Added with ID : '.$data["Resi"],
+            'name' => $user['nama'],
+            'isi' => $data["Isi"],
+            'resi' => $data["Resi"]
+        ];
+        Mail::to($user['Email'])->send(new ResiMail($details));
     }
 }

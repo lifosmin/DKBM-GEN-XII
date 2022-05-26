@@ -21,16 +21,8 @@ $(document).ready(function () {
         if (result.isConfirmed) {
             var solusi = document.querySelector("#solusi");
             if(solusi.value != ""){
-                swalWithBootstrapButtons.fire({
-                    title: "Solusi berhasil dikirimkan!",
-                    text: "Status dan Solusi telah diubah. Solusi akan dikirimkan melalui email ke pengirim Aspirasi.",
-                    confirmButtonText: "Okay",
-                }).then((result) => {
-                    if(result.isConfirmed) {
-                        const formAspirasi = document.querySelector(".formAspirasi");
-                        formAspirasi.submit();
-                    }
-                });
+                const formAspirasi = document.querySelector(".formAspirasi");
+                formAspirasi.submit();
             }else{
                 swalWithBootstrapButtons.fire({
                     title: "Solusi masih kosong!",
