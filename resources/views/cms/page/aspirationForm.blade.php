@@ -46,6 +46,8 @@
     @endif
     <form action="{{ route('aspirationVerification') }}" method="POST" class="form-margin" id="form-aspirasi">
         @csrf
+
+        <x-honeypot />
         
         <div class="mb-3">
             <label for="Resi" class="form-label">Your Resi</label>
