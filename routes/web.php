@@ -39,7 +39,8 @@ Route::post('/registration', [RegistrationController::class, 'registrationVerifi
 Route::get('/aspiration-form', [AspirationController::class, 'aspirationForm'])->name('aspirationForm')->middleware('auth:users');
 Route::get('/aspiration-form-id', [AspirationController::class, 'aspirationFormid'])->name('aspirationForm-id')->middleware('auth:users');
 Route::post('/aspiration-form', [AspirationController::class, 'aspirationVerification'])->name('aspirationVerification')->middleware('auth:users', ProtectAgainstSpam::class);
-Route::post('/aspiration-form-id', [AspirationController::class, 'verifikasiAspirasi'])->name('verifikasiAspirasi')->middleware('auth:users');
+Route::post('/aspiration-form-id', [AspirationController::class, 'verifikasiAspirasi'])->name('verifikasiAspirasi')->middleware('auth:users', ProtectAgainstSpam::class);
+Route::get('/aspirationFailed', [AspirationController::class, 'aspirationFailed'])->name("aspirationFailed")->middleware('auth:users');
 
 //Cek Resi
 Route::get('/resi', [AspirationController::class, 'resi'])->name('resi');
