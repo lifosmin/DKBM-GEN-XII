@@ -144,7 +144,8 @@ return [
         ],
         'NIM' => [
             'required' => 'Kolom NIM belum terisi.',
-            'regex' => 'Pastikan NIM Anda benar dan didahului dengan 000000',
+            'min' => 'Pastikan NIM Anda benar dan berisikan tepat 11 digit',
+            'max' => 'Pastikan NIM Anda benar dan berisikan tepat 11 digit',
             'unique' => 'NIM Anda sudah terdaftar!'
         ],
         'nomorWA' => [

@@ -20,7 +20,7 @@ class CreateRegistrationsTable extends Migration
             $table->string('NIM');
             $table->string('Jurusan');
             $table->string('nomorWA');
-            $table->string('ID_Line');
+            $table->string('ID_Line')->nullable();
             $table->string('password');
             $table->timestamps();
         });

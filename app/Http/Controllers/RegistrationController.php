@@ -92,15 +92,26 @@ class RegistrationController extends Controller
   }
 
   public function registrationVerification(Request $request) {
-    $validReq = $request->validate([
-      'Nama' => 'required|regex:/[a-zA-Z]+$/x',
-      'Email' => ['required', 'email:dns', 'regex:/^.+@(student\.umn\.ac\.id|lecturer\.umn\.ac\.id|umn\.ac\.id)$/', 'unique:registrations,Email'],
-      'password' => 'required|string|min:8|regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/',
-      'NIM' => 'required|regex:/000000(\d{5})/|unique:registrations,NIM',
-      'Jurusan' => 'required',
-      'nomorWA' => 'required|unique:registrations,nomorWA',
-      'ID_Line' => 'required|unique:registrations,ID_Line',
-    ]);
+    if($request->ID_Line){
+      $validReq = $request->validate([
+        'Nama' => 'required|regex:/[a-zA-Z]+$/x',
+        'Email' => ['required', 'email:dns', 'regex:/^.+@(student\.umn\.ac\.id|lecturer\.umn\.ac\.id|umn\.ac\.id)$/', 'unique:registrations,Email'],
+        'password' => 'required|string|min:8|regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/',
+        'NIM' => 'required|string|max:11|min:11|unique:registrations,NIM',
+        'Jurusan' => 'required',
+        'nomorWA' => 'required|unique:registrations,nomorWA',
+        'ID_Line'=>'required|unique:registrations,ID_Line'
+      ]);
+    }else{
+      $validReq = $request->validate([
+        'Nama' => 'required|regex:/[a-zA-Z]+$/x',
+        'Email' => ['required', 'email:dns', 'regex:/^.+@(student\.umn\.ac\.id|lecturer\.umn\.ac\.id|umn\.ac\.id)$/', 'unique:registrations,Email'],
+        'password' => 'required|string|min:8|regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/',
+        'NIM' => 'required|string|max:11|min:11|unique:registrations,NIM',
+        'Jurusan' => 'required',
+        'nomorWA' => 'required|unique:registrations,nomorWA',
+      ]);
+    }
 
     $validReq['password'] = Hash::make($validReq['password']);
     Registration::create($validReq);

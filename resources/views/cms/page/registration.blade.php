@@ -126,6 +126,9 @@
                   {{ $message }}
                 </div>
               @enderror
+              <div class="text-start justify-content-start mt-2">
+                <input type="checkbox" id="no-LineID"> Tidak memiliki ID Line
+              </div>
             </div>
 
             <div class="d-flex justify-content-center w-100 flex-column text-center">
@@ -147,6 +150,11 @@
 $(document).ready(function(){
   $('#showPassword').on('change', function(){
     $('#input-password').attr('type',$('#showPassword').prop('checked')==true?"text":"password"); 
+  });
+  $('#no-LineID').on('change', function(){
+    $('#input-ID_Line').attr('placeholder',$('#no-LineID').prop('checked')==true?"Tidak Memiliki ID Line":"ID Line"); 
+    $('#input-ID_Line').val("");
+    $('#input-ID_Line').prop('disabled',$('#no-LineID').prop('checked')==true?true:false); 
   });
 });
 </script>
