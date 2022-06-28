@@ -263,7 +263,7 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="100">
               <a href="{{ asset('img/gallery/gallery-1.JPG') }}" class="gallery-lightbox">
-                <img src="{{ asset('img/gallery/gallery-1.JPG') }}" alt="" class="img-fluid" style="height: 160px;">
+                <img loading=”lazy” src="{{ asset('img/gallery/gallery-1.JPG') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
             </div>
           </div>
@@ -271,7 +271,7 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="150">
               <a href="{{ asset('img/gallery/gallery-2.JPG') }}" class="gallery-lightbox">
-                <img src="{{ asset('img/gallery/gallery-2.JPG') }}" alt="" class="img-fluid" style="height: 160px;">
+                <img loading=”lazy” src="{{ asset('img/gallery/gallery-2.JPG') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
             </div>
           </div>
@@ -279,7 +279,7 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="200">
               <a href="{{ asset('img/gallery/gallery-3.JPG') }}" class="gallery-lightbox">
-                <img src="{{ asset('img/gallery/gallery-3.JPG') }}" alt="" class="img-fluid" style="height: 160px;">
+                <img loading=”lazy” src="{{ asset('img/gallery/gallery-3.JPG') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
             </div>
           </div>
@@ -287,7 +287,7 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="250">
               <a href="{{ asset('img/gallery/gallery-4.png') }}" class="gallery-lightbox">
-                <img src="{{ asset('img/gallery/gallery-4.png') }}" alt="" class="img-fluid" style="height: 160px;">
+                <img loading=”lazy” src="{{ asset('img/gallery/gallery-4.png') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
             </div>
           </div>
@@ -295,7 +295,7 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="300">
               <a href="{{ asset('img/gallery/gallery-5.png') }}" class="gallery-lightbox">
-                <img src="{{ asset('img/gallery/gallery-5.png') }}" alt="" class="img-fluid" style="height: 160px;">
+                <img loading=”lazy” src="{{ asset('img/gallery/gallery-5.png') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
             </div>
           </div>
@@ -303,7 +303,7 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="350">
               <a href="{{ asset('img/gallery/gallery-6.png') }}" class="gallery-lightbox">
-                <img src="{{ asset('img/gallery/gallery-6.png') }}" alt="" class="img-fluid" style="height: 160px;">
+                <img loading=”lazy” src="{{ asset('img/gallery/gallery-6.png') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
             </div>
           </div>
@@ -311,7 +311,7 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="400">
               <a href="{{ asset('img/gallery/gallery-7.jpg') }}" class="gallery-lightbox">
-                <img src="{{ asset('img/gallery/gallery-7.JPG') }}" alt="" class="img-fluid" style="height: 160px;">
+                <img loading=”lazy” src="{{ asset('img/gallery/gallery-7.JPG') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
             </div>
           </div>
@@ -319,7 +319,7 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="450">
               <a href="{{ asset('img/gallery/gallery-8.jpg') }}" class="gallery-lightbox">
-                <img src="{{ asset('img/gallery/gallery-8.JPG') }}" alt="" class="img-fluid" style="height: 160px;">
+                <img loading=”lazy” src="{{ asset('img/gallery/gallery-8.JPG') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
             </div>
           </div>
@@ -327,7 +327,7 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="450">
               <a href="{{ asset('img/gallery/gallery-8.jpg') }}" class="gallery-lightbox">
-                <img src="{{ asset('img/2021/core-bem.png') }}" alt="" class="img-fluid" style="height: 160px;">
+                <img loading=”lazy” src="{{ asset('img/2021/core-bem.png') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
             </div>
           </div>
@@ -335,7 +335,7 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="450">
               <a href="{{ asset('img/gallery/gallery-8.jpg') }}" class="gallery-lightbox">
-                <img src="{{ asset('img/2021/dkbm-muda.png') }}" alt="" class="img-fluid" style="height: 160px;">
+                <img loading=”lazy” src="{{ asset('img/2021/dkbm-muda.png') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
             </div>
           </div>
@@ -343,7 +343,7 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="450">
               <a href="{{ asset('img/gallery/gallery-8.jpg') }}" class="gallery-lightbox">
-                <img src="{{ asset('img/2021/foto-rapat.jpg') }}" alt="" class="img-fluid" style="height: 160px;">
+                <img loading=”lazy” src="{{ asset('img/2021/foto-rapat.jpg') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
             </div>
           </div>
@@ -351,7 +351,7 @@
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item d-flex justify-content-center" data-aos="zoom-in" data-aos-delay="450">
               <a href="{{ asset('img/gallery/gallery-8.jpg') }}" class="gallery-lightbox">
-                <img src="{{ asset('img/2021/rapat-lagi.png') }}" alt="" class="img-fluid" style="height: 160px;">
+                <img loading=”lazy” src="{{ asset('img/2021/rapat-lagi.png') }}" alt="" class="img-fluid" style="height: 160px;">
               </a>
             </div>
           </div>
@@ -373,7 +373,7 @@
 
           <div class="col-lg-2 col-md-6 mt-5 mt-md-0 box">
             <div class="member" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="{{ asset('img/2021/anggota/Jazzy.png') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img loading=”lazy” src="{{ asset('img/2021/anggota/Jazzy.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Jazzy Gratia</h4>
                 <span>Ketua</span>
@@ -383,7 +383,7 @@
 
           <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 box">
             <div class="member" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="{{ asset('img/2021/anggota/Nisa.png') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img loading=”lazy” src="{{ asset('img/2021/anggota/Nisa.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Nyi Ayu Shafannisa</h4>
                 <span>Wakil Ketua</span>
@@ -393,7 +393,7 @@
 
           <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 box">
             <div class="member" data-aos="zoom-in" data-aos-delay="300">
-              <div class="pic"><img src="{{ asset('img/2021/anggota/Anton.png') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img loading=”lazy” src="{{ asset('img/2021/anggota/Anton.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Antonius Kevin</h4>
                 <span>Sekretaris & Bendahara</span>
@@ -405,7 +405,7 @@
 
           <div class="col-lg-2 col-md-6 box">
             <div class="member" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="{{ asset('img/2021/anggota/Diego.png') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img loading=”lazy” src="{{ asset('img/2021/anggota/Diego.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Benediktus Diego</h4>
                 <span>Kesejahteraan Mahasiswa</span>
@@ -415,7 +415,7 @@
 
           <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 box">
             <div class="member" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="{{ asset('img/2021/anggota/Aurel.png') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img loading=”lazy” src="{{ asset('img/2021/anggota/Aurel.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Anggrita Aurelia</h4>
                 <span>Kesejahteraan Mahasiswa</span>
@@ -428,7 +428,7 @@
         <div class="row1" data-aos="fade-left" style="align-items: center;">        
           <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 box">
               <div class="member" data-aos="zoom-in" data-aos-delay="400">
-                <div class="pic"><img src="{{ asset('img/2021/anggota/Cindy.png') }}" class="img-fluid" alt=""></div>
+                <div class="pic"><img loading=”lazy” src="{{ asset('img/2021/anggota/Cindy.png') }}" class="img-fluid" alt=""></div>
                 <div class="member-info">
                   <h4>Cindy Lea Valerie</h4>
                   <span>Medkom</span>
@@ -438,7 +438,7 @@
          
           <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 box">
             <div class="member" data-aos="zoom-in" data-aos-delay="300">
-              <div class="pic"><img src="{{ asset('img/2021/anggota/Linus.png') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img loading=”lazy” src="{{ asset('img/2021/anggota/Linus.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Linus Gregorius</h4>
                 <span>Medkom</span>
@@ -448,7 +448,7 @@
 
           <div class="col-lg-2 col-md-6 mt-5 mt-md-0 box">
             <div class="member" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="{{ asset('img/2021/anggota/Alivia.png') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img loading=”lazy” src="{{ asset('img/2021/anggota/Alivia.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Alivia Syaidha</h4>
                 <span>Medkom</span>
@@ -458,7 +458,7 @@
 
           <div class="col-lg-2 col-md-6 mt-5 mt-lg-0 box">
             <div class="member" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="{{ asset('img/2021/anggota/Ricky.png') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img loading=”lazy” src="{{ asset('img/2021/anggota/Ricky.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Ricky</h4>
                 <span>Pengawasan BEM</span>
@@ -468,7 +468,7 @@
 
           <div class="col-lg-2 col-md-6 box">
             <div class="member" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="{{ asset('img/2021/anggota/Acel.png') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img loading=”lazy” src="{{ asset('img/2021/anggota/Acel.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Eleonora Axcel</h4>
                 <span>Pengawasan BEM</span>
@@ -478,7 +478,7 @@
 
           <div class="col-lg-2 col-md-6 box">
             <div class="member" data-aos="zoom-in" data-aos-delay="400">
-              <div class="pic"><img src="{{ asset('img/2021/anggota/Sopia.png') }}" class="img-fluid" alt=""></div>
+              <div class="pic"><img loading=”lazy” src="{{ asset('img/2021/anggota/Sopia.png') }}" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Sopia Zalsabillah</h4>
                 <span>Pengawasan BEM</span>
