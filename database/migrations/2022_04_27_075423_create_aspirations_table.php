@@ -15,7 +15,7 @@ class CreateAspirationsTable extends Migration
     {
         Schema::create('aspirations', function (Blueprint $table) {
             $table->id();
-            $table->string('Resi');
+            $table->string('Resi')->unique();
             $table->foreignId('User_id');
             $table->string('Kategori');
             $table->text('Isi');

@@ -19,8 +19,8 @@ class DatabaseSeeder extends Seeder
     {
         User::create([
             'name' => 'Admin',
-            'Email' => 'admin@umn.ac.id',
-            'password' => Hash::make('DKBMUMN2022')
+            'Email' => 'dkbm@umn.ac.id',
+            'password' => Hash::make('gen12DKBM2022')
         ]);
 
         Registration::create([

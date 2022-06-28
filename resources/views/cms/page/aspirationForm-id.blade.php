@@ -46,7 +46,6 @@
     @endif
     <form action="{{ route('verifikasiAspirasi') }}" method="POST" class="form-margin" id="form-aspirasi">
         @csrf
-        <h1 class="text-center">Form Aspirasi</h1>
         <div class="mb-3">
             <label for="Resi" class="form-label">Resi Anda</label>
             <input type="text" class="form-control @error('Resi') is-invalid @enderror" id="Resi" name="Resi" value="{{ $Resi }}" disabled>
