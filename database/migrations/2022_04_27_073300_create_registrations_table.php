@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Str;
 
 class CreateRegistrationsTable extends Migration
 {
@@ -22,6 +23,9 @@ class CreateRegistrationsTable extends Migration
             $table->string('nomorWA');
             $table->string('ID_Line')->nullable();
             $table->string('password');
+            $table->string('email_verify_id')->default(Str::random(32));
+            $table->string('email_verify_created_at')->default(now());
+            $table->timestamp('email_verified_at')->nullable();
             $table->timestamps();
         });
     }
