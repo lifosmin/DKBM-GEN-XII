@@ -1,12 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\RegistrationController;
-use App\Http\Controllers\AspirationController;
-use App\Http\Controllers\MailController;
 use Spatie\Honeypot\ProtectAgainstSpam;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MailController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\PasswordController;
+use App\Http\Controllers\AspirationController;
+use App\Http\Controllers\RegistrationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +23,7 @@ use Spatie\Honeypot\ProtectAgainstSpam;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/index-id', [HomeController::class, 'indexid'])->name('home-id');
 
-//email verification
+//Email verification
 Route::post('/mail/verify/resend', [MailController::class, 'resendEmailVerification']);
 Route::get('/mail/verify/expired', [MailController::class, 'verifyExpiredPage'])->name('email-verification-expired');
 Route::get('/mail/verify/success', [MailController::class, 'verifySuccessPage'])->name('email-verification-success');
@@ -30,6 +31,17 @@ Route::get('/mail/verify/resend', [MailController::class, 'verifyResendPage'])->
 Route::post('/mail/verify/resend', [MailController::class, 'resendEmailVerification'])->name('email-verification-resend');
 Route::get("/mail/verify", [MailController::class, "emailVerification"])->name("email-verification");
 Route::get("/mail/verify/unauthenticated", [MailController::class, "unauthenticatedEmailPage"])->name("verification.notice");
+
+//Forgot Password
+Route::middleware(["guest:users"])->group(function()  {
+  Route::post('/password/forgot', [PasswordController::class, 'forgotPassword']);
+  Route::get('/password/forgot', [PasswordController::class, 'forgotPasswordPage']);
+
+  Route::post('/password/forgot/change', [PasswordController::class, 'forgotPasswordChange']);
+  Route::get('/password/forgot/change', [PasswordController::class, 'forgotPasswordChangePage']);
+  
+  Route::get('/password/forgot/success', [PasswordController::class, 'forgotPasswordSuccessPage']);
+});
 
 //Login
 Route::get('/login', [RegistrationController::class, 'login'])->name('login')->middleware('guest:users');

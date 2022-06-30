@@ -12,8 +12,8 @@
     <div class="d-block w-100 mb-5" style="height: 80px; background-color: rgb(1, 4, 136)"></div>
 
     <div class="container d-flex align-items-center flex-column justify-content-center gap-4">
-        <div class="status-description">
-            Kode verifikasi baru telah dikirimkan ulang ke email kamu, gas dicek gan
+        <div class="alert alert-success">
+            New Email Verification code has been sent to your email.
         </div>
 
         <div>

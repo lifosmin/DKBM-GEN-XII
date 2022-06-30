@@ -40,7 +40,7 @@ class DatabaseSeeder extends Seeder
             'Jurusan' => 'Komunikasi Strategis',
             'nomorWA' => '081287318166',
             'ID_Line' => 'atrasshalhan',
-            'password' => Hash::make('testing12345')
+            'password' => Hash::make('Testing12345')
         ]);
 
         Aspiration::create([

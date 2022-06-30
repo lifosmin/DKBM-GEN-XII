@@ -23,9 +23,11 @@ class CreateRegistrationsTable extends Migration
             $table->string('nomorWA');
             $table->string('ID_Line')->nullable();
             $table->string('password');
-            $table->string('email_verify_id')->default(Str::random(32));
-            $table->string('email_verify_created_at')->default(now());
+            $table->string('email_verify_id')->nullable();
+            $table->string('email_verify_created_at')->nullable();
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('forgot_password_id')->nullable();
+            $table->string('forgot_password_created_at')->nullable();
             $table->timestamps();
         });
     }

@@ -23,6 +23,8 @@ class MailController extends Controller {
 
     //waktu email verifikasi masih dibawah 15 menit
     $user->email_verified_at = now();
+    $user->email_verify_created_at = null;
+    $user->email_verify_id = null;
 
     $user->save();
 
@@ -30,14 +32,12 @@ class MailController extends Controller {
   }
 
   public function resendEmailVerification(Request $request) {
-    $user = Registration::where("email_verify_id", $request->link)->first();
+    $request->user()->email_verify_id = Str::random(32);
+    $request->user()->email_verify_created_at = now();
 
-    $user->email_verify_id = Str::random(32);
-    $user->email_verify_created_at = now();
+    $request->user()->save();
 
-    $user->save();
-
-    $this->sendEmail($user);
+    $this->sendEmail($request->user());
 
     return redirect(route("email-verification-resend"));
   }

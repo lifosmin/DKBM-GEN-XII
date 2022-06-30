@@ -9,7 +9,7 @@
     }
 
     .section-main{
-      min-height:100vh;
+      min-height:70vh;
       
     }
 
@@ -38,32 +38,33 @@
 <div class="section-main" >
 <div class="d-block w-100 mb-5" style="height: 80px; background-color: rgb(1, 4, 136)"></div>
   <div class="container h-100 m-auto p-3" style="background-color: white; box-shadow: 0px 3.76545px 3.76545px rgba(0, 0, 0, 0.25); border-radius:25px">
-    <h1 class="text-center">WELCOME!</h1>
+    <h1 class="text-center">Reset Password</h1>
     @if (session('status'))
         <div style="color:red; font-size:0.8em; margin:auto; text-align:center;">
             {{ session('status') }}
         </div>
     @endif
-    <form action="{{ route('loginVerification') }}" method="POST" class="form" id="form-login">
+    <form action="{{ url("/password/forgot") }}" method="POST" class="form" id="form-login">
       @csrf
       <div class="mb-3">
         <label for="Email" class="form-label">Email Address</label>
-        <input type="email" class="form-control" id="email" name="Email" placeholder="Masukkan Email Anda">
+        <input type="email" class="form-control" id="email" name="Email" placeholder="Enter your email address">
       </div>
-      <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan kata sandi Anda">
-        <div class="text-start justify-content-start mt-2">
-          <input type="checkbox" id="showPassword"> Show Password
-        </div>
-      </div>
-      <button type="submit" class="btn btn-masuk" style="">LOGIN</button>
 
-      <p class="description mt-2 mb-0">
-      Don't have an account? Sign up now! <a style="color:rgba(1, 4, 136, 0.9)" href="{{ url("/registration") }}">Register</a>
+      @if(session("user_not_found") == true)
+        <div class="alert alert-danger p-2">
+          User not found
+        </div>
+      @endif
+
+      <button type="submit" class="btn btn-masuk">Reset Password</button>
+
+      <p class="description mb-0 mt-2">
+      Already remember your password ? <a style="color:rgba(1, 4, 136, 0.9)" href="{{ url("/login") }}">Login</a>
       </p>
+
       <p class="description">
-      Forgot your password ? <a style="color:rgba(1, 4, 136, 0.9)" href="{{ url("/password/forgot") }}">Reset Password</a>
+      Don't have an account? Sign up now! <a style="color:rgba(1, 4, 136, 0.9)" href="{{ url("/registration") }}">Register</a>
       </p>
     </form>
   </div>

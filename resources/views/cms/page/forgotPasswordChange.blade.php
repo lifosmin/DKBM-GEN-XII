@@ -9,7 +9,7 @@
     }
 
     .section-main{
-      min-height:100vh;
+      min-height:70vh;
       
     }
 
@@ -38,33 +38,40 @@
 <div class="section-main" >
 <div class="d-block w-100 mb-5" style="height: 80px; background-color: rgb(1, 4, 136)"></div>
   <div class="container h-100 m-auto p-3" style="background-color: white; box-shadow: 0px 3.76545px 3.76545px rgba(0, 0, 0, 0.25); border-radius:25px">
-    <h1 class="text-center">WELCOME!</h1>
+    <h1 class="text-center">Reset Password</h1>
     @if (session('status'))
         <div style="color:red; font-size:0.8em; margin:auto; text-align:center;">
             {{ session('status') }}
         </div>
     @endif
-    <form action="{{ route('loginVerification') }}" method="POST" class="form" id="form-login">
+    
+    <form action="{{ url("/password/forgot/change") }}" method="POST" class="form" id="form-login">
       @csrf
+      <input type="hidden" name="forgot_password_id" value="{{ $forgot_password_id }}">
+      
       <div class="mb-3">
-        <label for="Email" class="form-label">Email Address</label>
-        <input type="email" class="form-control" id="email" name="Email" placeholder="Masukkan Email Anda">
+        <label for="password" class="form-label">New Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Input Password">
       </div>
-      <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan kata sandi Anda">
-        <div class="text-start justify-content-start mt-2">
-          <input type="checkbox" id="showPassword"> Show Password
-        </div>
-      </div>
-      <button type="submit" class="btn btn-masuk" style="">LOGIN</button>
 
-      <p class="description mt-2 mb-0">
-      Don't have an account? Sign up now! <a style="color:rgba(1, 4, 136, 0.9)" href="{{ url("/registration") }}">Register</a>
-      </p>
-      <p class="description">
-      Forgot your password ? <a style="color:rgba(1, 4, 136, 0.9)" href="{{ url("/password/forgot") }}">Reset Password</a>
-      </p>
+      <div class="mb-3">
+        <label for="password-confirmation" class="form-label">New Password Confirmation</label>
+        <input type="password" class="form-control" id="password-confirmation" name="password-confirmation" placeholder="Input Password Confirmation">
+      </div>
+
+      @if(session()->get("password_not_match") == true)
+        <div class="alert alert-danger my-2 p-2">
+          Password does not match!
+        </div>
+      @endif
+
+      @if(session()->get("password_validation_failed") == true)
+        <div class="alert alert-danger my-2 p-2">
+          Password must be at least 8 characters long, 1 lowercase and 1 uppercase
+        </div>
+      @endif
+
+      <button type="submit" class="btn btn-masuk">Reset Password</button>
     </form>
   </div>
 </div>
