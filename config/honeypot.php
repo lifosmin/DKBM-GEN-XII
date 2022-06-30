@@ -1,7 +1,5 @@
 <?php
 
-use Spatie\Honeypot\SpamResponder\BlankPageResponder;
-
 return [
     /*
      * This switch determines if the honeypot protection should be activated.
@@ -39,7 +37,7 @@ return [
      * If the form is submitted faster than this amount of seconds
      * the form submission will be considered invalid.
      */
-    'amount_of_seconds' => env('HONEYPOT_SECONDS', 5*1),
+    'amount_of_seconds' => env('HONEYPOT_SECONDS', 30),
 
     /*
      * This class is responsible for sending a response to requests that
@@ -48,7 +46,7 @@ return [
      * A valid responder is any class that implements
      * `Spatie\Honeypot\SpamResponder\SpamResponder`
      */
-    'respond_to_spam_with' => BlankPageResponder::class,
+    'respond_to_spam_with' => App\Http\Controllers\Honeypot\CustomSpamResponder::class,
 
     /*
      * When activated, requests will be checked if honeypot fields are missing,

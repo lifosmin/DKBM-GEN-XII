@@ -52,7 +52,7 @@ Route::group(["middleware" => ["auth:users", "verified"]], function() {
   Route::get('/aspiration-form-id', [AspirationController::class, 'aspirationFormid'])->name('aspirationForm-id');
   Route::post('/aspiration-form', [AspirationController::class, 'aspirationVerification'])->name('aspirationVerification')->middleware(ProtectAgainstSpam::class);
   Route::post('/aspiration-form-id', [AspirationController::class, 'verifikasiAspirasi'])->name('verifikasiAspirasi')->middleware(ProtectAgainstSpam::class);
-  Route::get('/aspirationFailed', [AspirationController::class, 'aspirationFailed'])->name("aspirationFailed");
+  Route::get('/aspirationFailed', [AspirationController::class, 'aspirationFailed'])->name("custom-spam-response");
 
   //Cek Resi
   Route::get('/resi', [AspirationController::class, 'resi'])->name('resi');
