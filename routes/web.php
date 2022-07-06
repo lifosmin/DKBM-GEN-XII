@@ -7,6 +7,7 @@ use App\Http\Controllers\MailController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\AspirationController;
+use App\Http\Controllers\api\AspirationController as ApiAspirationController;
 use App\Http\Controllers\RegistrationController;
 
 /*
@@ -59,6 +60,8 @@ Route::post('/registration', [RegistrationController::class, 'registrationVerifi
 
 //email harus terverifikasi & harus login sebagai user
 Route::group(["middleware" => ["auth:users", "verified"]], function() {
+  Route::get("/mail", [ApiAspirationController::class, "index"]);
+  
   //FORM ASPIRASI
   Route::get('/aspiration-form', [AspirationController::class, 'aspirationForm'])->name('aspirationForm');
   Route::get('/aspiration-form-id', [AspirationController::class, 'aspirationFormid'])->name('aspirationForm-id');

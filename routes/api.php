@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\api\AspirationController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +14,10 @@ use App\Http\Controllers\MailController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+Route::group(["middleware" => ["auth:users", "verified"]],function() {
+  Route::resource("/aspiration", AspirationController::class);
+});
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();

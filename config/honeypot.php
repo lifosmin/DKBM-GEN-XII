@@ -4,7 +4,7 @@ return [
     /*
      * This switch determines if the honeypot protection should be activated.
      */
-    'enabled' => env('HONEYPOT_ENABLED', true),
+    'enabled' => env('HONEYPOT_ENABLED', false),
 
     /*
      * Here you can specify name of the honeypot field. Any requests that submit a non-empty
