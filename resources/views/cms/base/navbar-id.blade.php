@@ -26,7 +26,7 @@
               <a class="dropdown-item nav-link scrollto bi bi-images" href="{{ route('home-id') }}#gallery">Galeri</a>
               <a class="dropdown-item nav-link scrollto bi bi-people-fill" href="{{ route('home-id') }}#team">Anggota</a>
               <a class="dropdown-item nav-link scrollto bi bi-question-circle-fill" href="{{ route('home-id') }}#faq">FAQ</a>
-              <a class="dropdown-item nav-link scrollto bi bi-telephone-fill" href="{{ route('home-id') }}#contact">Kontakk</a>
+              <a class="dropdown-item nav-link scrollto bi bi-telephone-fill" href="{{ route('home-id') }}#contact">Kontak</a>
             </div>
           </li>
           <li class="nav-item">
